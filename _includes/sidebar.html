@@ -1,0 +1,17 @@
+<div class="sidebar ">
+  <h2>Recent Articles</h2>
+  <ul>
+    {% for post in site.posts limit:9 %}
+    <li><a href="{{ post.url | site.baseurl }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="sidebar">
+  <h2>Tags</h2>
+  <ul>
+    {% for tag in site.tags %}
+      <li><a href="{{ site.baseurl }}/tag/{{ tag[0] }}">{{ tag[0] }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
