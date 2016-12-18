@@ -256,7 +256,7 @@ nav.navbar.shrink {
 .navbar-brand {
   font-size: 30px;
   color: $accent-color;
-
+  height: inherit;
 }
 nav.shrink a {
   padding-top: 10px !important;
@@ -264,7 +264,7 @@ nav.shrink a {
   font-size: 15px;
 }
 nav.shrink .navbar-brand {
-  font-size: 25px;
+  font-size: 30px;
   height: inherit;
 }
 .navbar .navbar-nav {

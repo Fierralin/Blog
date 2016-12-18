@@ -6,10 +6,13 @@ title: Tags
 
 <div class="page-content wc-container">
   <div class="post">
+    <h1>Tags</h1>  
 	{% for tag in site.tags %}
-	<h2 id="{{ tag[0] | slugify }}" style=" padding-top: 30px;">
-          {{ tag[0] }}
-        </h2>
+	  <a href="{{site.baseurl}}/tag/{{ tag[0] }}">
+	    <h2 id="{{ tag[0] | slugify }}">
+            {{ tag[0] }}
+            </h2>
+	  </a>
 	<ul>
 		{% for post in site.posts %}
 		 {% if post.tags contains tag[0] %}
