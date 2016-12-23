@@ -19,11 +19,25 @@
                   {% endfor %}
                 </ul>
               </div>
-              <div class="post-content">
+              <div id="postcontent" class="post-content">
                 <div id="toc" class="toc"></div>
                 {{ content }}
                 {% include share.html %}
               </div>
+			  <nav class="article-previous fn-clear">
+				{% if page.previous %}
+				  <a class="prev" href="{{ site.baseurl|append:page.previous.url }}"
+				  rel="bookmark" title="{{page.previous.title}}">
+				    &laquo;&nbsp;{{ page.previous.title | truncatewords:5 }}
+				  </a>
+				{% endif %}
+				{% if page.next %}
+				  <a class="next" href="{{ site.baseurl|append:page.next.url }}"
+				  rel="bookmark" title="{{page.next.title}}" style="float:right">
+				    {{ page.next.title | truncatewords:5 }}&nbsp;&raquo;
+				  </a>
+				{% endif %}
+			  </nav>
               {% if page.comments %}
               <div id="disqus_thread">
                 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
