@@ -38,12 +38,14 @@
 				  </a>
 				{% endif %}
 			  </nav>
-              {% if page.comments %}
-              <div id="disqus_thread">
-                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-              </div>
-              {% endif %}
+              {% if site.youyan %}
+				<!-- UY BEGIN -->
+				<div id="uyan_frame"></div>
+				<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2122547"></script>
+				<!-- UY END -->
+			  {% endif %}
+			  {% include intence-debate-comments.html %}
+			  {% include disqus-comments.html %}
             </div>
           </div>
         </div>
@@ -52,7 +54,6 @@
         </div>
       </div>
     </div>
-    {% include disqus-comments.html %}
   </div>
   {% include footer.html %}
 </div>

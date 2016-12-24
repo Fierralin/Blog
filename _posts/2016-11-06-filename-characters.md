@@ -5,6 +5,7 @@ date: 2016-11-06 16:25:06
 description: What the fuck...
 tags: UNIX OS
 share: true
+intensedebate: true
 ---
 
 ```
