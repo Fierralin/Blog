@@ -221,7 +221,7 @@ div.post-meta {
 .note:before {
   content: "\f06a";
   font-size: 2em;
-  font-family: FontAwesome;
+  font-family: FontAwesome, FangSong;
   left: 0px;
   position:absolute;
   top: 0;
@@ -242,7 +242,7 @@ nav a {
   padding-bottom: 20px !important;
   @include transition(color 0.31s);
   font-size: 18px;
-  font-family: Ubuntu;
+  font-family: Ubuntu, FangSong;
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
 }

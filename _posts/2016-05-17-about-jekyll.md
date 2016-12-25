@@ -2,6 +2,7 @@
 layout: post 
 title: "About jekyll"
 date: 2016-05-17 16:25:06
+tags: jekyll
 disqus: true
 ---
 
