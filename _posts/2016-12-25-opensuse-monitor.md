@@ -41,6 +41,7 @@ HDMI-3 disconnected (normal left inverted right x axis y axis)
 
 在已知DP-1顯示器分辨率能有`1280x1024`的情況下，改分辨率就好辦多了。
 執行`cvt 1280 1024`輸出
+
 > 1280x1024 59.89 Hz (CVT 1.31M4) hsync: 63.67 kHz; pclk: 109.00 MHz                                                                       
 Modeline "1280x1024_60.00"  109.00  1280 1368 1496 1712  1024 1027 1034 1063 -hsync +vsync
 
@@ -53,6 +54,7 @@ Modeline "1280x1024_60.00"  109.00  1280 1368 1496 1712  1024 1027 1034 1063 -hs
 
 要想做到可以在KDE系統裏面找到該設置項，做法如下
 進入`/etc/X11/xorg.conf.d/`目錄，可以看到
+
 > 50-monitor.conf
 50-screen.conf
 
