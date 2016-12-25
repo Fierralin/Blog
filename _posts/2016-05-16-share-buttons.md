@@ -4,6 +4,7 @@ title: "Share buttons"
 date: 2016-05-15 16:25:06
 description: Built-in share buttons!
 share: true
+duoshuo: true
 ---
 
 # Share buttons

@@ -36,8 +36,9 @@ yandex_metrica: true
 # setting below must also be true. Individual posts can override 'comments' to
 # disable on a post-by-post basis
 disqus: fierralin-github-io
-youyan: true
-duoshuo: 
+#youyan: true
+#duoshuo: 
+#intense-debate: 
 comments: true
 
 permalink: /:year/:month/:title
