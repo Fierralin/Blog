@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo "./newpost [-p post_name] [-l layout] [-t tags] [-d description]"
+echo "./newpost [-p post_name] [-n post_srcname] [-l layout] [-t tags] [-d description]"
 echo Tip: tags must be "tag1 tag2 ..."
-echo layout: post, default
+echo layout: post, neon, default
 echo comment: disqus, intensedebate, duoshuo
 
 post_srcname="New Post"
@@ -35,9 +35,9 @@ do
 			;;
 
 		h)  # help
-			echo "./newpost [-p post_name] [-l layout] [-t tags] [-d description]"
+			echo "./newpost [-p post_name] [-n post_srcname] [-l layout] [-t tags] [-d description]"
 			echo Tip: tags must be "tag1 tag2 ..."
-			echo layout: post, default
+			echo layout: post, neon, default
 			echo comment: disqus, intensedebate, duoshuo
 			exit 1
 			;;

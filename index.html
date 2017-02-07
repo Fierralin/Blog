@@ -11,20 +11,20 @@ layout: page
         {
 		  document.getElementById(descid).style.display = "block";
           document.getElementById(postid).style.display = "none";
-          document.getElementById(inhtmText).innerHTML="<img src='images/arrow_show.png' alt='&gt;'>";
+          document.getElementById(inhtmText).innerHTML="<img src='{{ site.baseurl }}/images/arrow_show.png' alt='&gt;'>";
 		  document.getElementById(inhtmText).title="Show More"
         }
        if(x=="none")
        {
 		  document.getElementById(descid).style.display = "none";
           document.getElementById(postid).style.display = "block";
-          document.getElementById(inhtmText).innerHTML="<img src='images/arrow_hide.png' alt='&lt;'>";
+          document.getElementById(inhtmText).innerHTML="<img src='{{ site.baseurl }}/images/arrow_hide.png' alt='&lt;'>";
 		  document.getElementById(inhtmText).title="Show Less"
         }
      }
 </script>
 
-{% for post in site.posts limit:10 %}
+{% for post in paginator.posts %}
   <h2 class="post-title" id="div-{{ post.date | date: '%Y-%m-%d-' }}{{post.url | remove: '/' }}">
     <a href="{{post.url | prepend:site.baseurl}}">
       {{ post.title }}
@@ -46,7 +46,7 @@ layout: page
 				showmoreless(showval, 'desc-'+showval ,'show-'+showval)"
 			style="float:right; padding-top: 1px"
 			title="Show More">
-			<img src='images/arrow_show.png' alt='&lt;'>
+			<img src='{{ site.baseurl }}/images/arrow_show.png' alt='&lt;'>
 	</a></li>
   </ul>
   </div>
@@ -68,13 +68,33 @@ layout: page
 			showmoreless(showval, 'desc-'+showval ,'show-'+showval)"
 		style="float:right"
 		title="Hide Contents">
-		<img src='images/arrow_hide.png' alt='&lt;'>
+		<img src='{{ site.baseurl }}/images/arrow_hide.png' alt='&lt;'>
 	</a>
   </div>
   <script>
     $( "#post-{{ post.date | date: '%Y-%m-%d-' }}{{post.url | remove: '/' }}" ).load( "{{post.url | prepend:site.baseurl}}.html #postcontent" );
   </script>
 {% endfor %}
+
+<div class="pagination">
+    {% if paginator.previous_page %}
+	    {% if paginator.previous_page == 1 %}
+            <a class="previous" href="{{ site.baseurl }}/">
+				    &laquo;&nbsp;Previous
+	        </a>
+		{% else %}
+		    <a class="previous" href="{{ site.baseurl }}/page_{{ paginator.previous_page }}/">
+				    &laquo;&nbsp;Previous
+	        </a>
+		{% endif %}
+    {% endif %}
+        <span class="page_number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}
+	    <a class="next" href="{{ site.baseurl }}/page_{{ paginator.next_page }}/">
+				    Next&nbsp;&raquo;
+		</a>
+	{% endif %}
+</div>
 
 <div class="post-footer">
   <div class="column-full">

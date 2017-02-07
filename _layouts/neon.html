@@ -1,0 +1,72 @@
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+	<title>{{ page.title }}</title>
+	<style type="text/css">
+		html {
+			background: #000000;
+			color: snow;
+			background:url("{{site.baseurl}}/images/roughbg.jpg") black repeat-x;
+		}
+		body {
+			font-family: Verdana, Tahoma, FangSong; font-size: 13pt;
+			word-spacing: 5px;
+			
+		}
+		.maincontainer {
+			width: 900px; margin: 0 auto;
+		}
+		.contentwrapper {
+			float: left; width: 100%;
+		}
+		.contentcolumn {
+			color:snow; margin-left: 171;
+		}
+		.contentcolumn p { text-indent: 2em; font-family: FangSong}
+		.leftcolumn {
+			float: left; width: 17%; margin-left: -100%;
+		}
+		.leftcolumn ul li a {
+			text-decoration:none;
+			font-size:13pt; color:#666666;
+			padding:10px;
+			display:block;
+		}
+		.leftcolumn ul li a:hover {
+			color: snow;
+		}
+		.mainpage_content {
+			min-width: 755px;
+			width: 800px;
+			margin-left: 9px;
+			background-color: #000000;
+			background-repeat:repeat-x;
+			box-shadow: 0px 0px 10px #666;
+			font-family: Tahoma, Calibri, Fangsong,'Gill Sans MT Condensed'
+		}
+	</style>
+</head>
+
+<body>
+
+
+<div class="maincontainer">
+	<div style="margin-top:50px; font-size:28; color:LightSkyBlue">
+	  <h1>{{ page.title }}</h1>
+	</div>
+	<div class="contentwrapper">
+		<div id="postcontent" class="contentcolumn">
+		  {{ content }}
+		</div>
+	</div>
+
+	<div class="leftcolumn">
+	  
+	  <ul style="padding-top:35px; margin-left:-30; list-style:none; letter-spacing:0;">
+		<li><a href="{{ site.baseurl }}/">Home</a></li>
+		<li><a href="{{ site.baseurl }}/archive.html">Archive</a></li>
+		<li><a href="{{ site.baseurl }}/tags.html">Tags</a></li>
+	  </ul>
+	</div> <!-- finish leftcolumn -->
+</div>
+
+</body>
