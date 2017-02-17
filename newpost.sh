@@ -1,21 +1,31 @@
 #!/bin/bash
 
-echo "./newpost [-p post_name] [-n post_srcname] [-l layout] [-t tags] [-d description]"
-echo Tip: tags must be "tag1 tag2 ..."
-echo layout: post, neon, default
-echo comment: disqus, intensedebate, duoshuo
+echoinfo="Usages: ./newpost [-n post_name] [-N post_title] [-l layout] [-t tags]\
+ [-d description] [-c comment_opt] [-f format_end] [-h] \n\
+ n, N: n must in english while N could be in chinese \n\
+ l: layout options are post, neon, default \n\
+ t: format of tags must be \"tag1 tag2 ...\" \n\
+ c: disqus, intensedebate, duoshuo \n\
+ f: the format of post source file, default is .md, others: html \n\
+ h: this help. \n"
 
 post_srcname="New Post"
+post_title=""
 layout="post"
 tags=""
 desc=""
 comment_opt=""
+format_end="md"
 
-while getopts n:l:t:d:c:h opt
+while getopts n:N:l:t:d:c:f:h opt
 do
 	case "$opt" in
-		n)  # post name
+		n)  # post source name
 			post_srcname="$OPTARG"
+			;;
+		
+		N)  # post title
+			post_title="$OPTARG"
 			;;
 
 		l)  # layout
@@ -33,12 +43,13 @@ do
 		c)  # comments
 			comment_opt="$OPTARG"
 			;;
+		
+		f)  # comments
+			format_end="$OPTARG"
+			;;
 
 		h)  # help
-			echo "./newpost [-p post_name] [-n post_srcname] [-l layout] [-t tags] [-d description]"
-			echo Tip: tags must be "tag1 tag2 ..."
-			echo layout: post, neon, default
-			echo comment: disqus, intensedebate, duoshuo
+			echo -e $echoinfo
 			exit 1
 			;;
 
@@ -49,7 +60,7 @@ done
 #echo $2
 #echo $#
 
-post_name=`date  "+%Y-%m-%d"`-`echo $post_srcname | sed "s/[ \/ : ^ \& \% \# \! , . { } ( ) * ? \" < > |]/-/g"`.md
+post_name=`date  "+%Y-%m-%d"`-`echo $post_srcname | sed "s/[ \/ : ^ \& \% \# \! , . { } ( ) * ? \" < > |]/-/g"`.$format_end
 #echo $post_name
 
 post_name=`echo $post_name | sed 's/'"'"/-'/g'`
@@ -59,10 +70,16 @@ post_name=`echo $post_name | sed 's/-\./\./g'`
 
 file=./_posts/${post_name}
 touch $file
+# Write the head of title
 echo --- > $file
 echo layout: $layout >> $file
-echo title: \"$post_srcname\" >> $file
+if [ -n "$post_title" ]; then
+	echo title: \"$post_title\" >> $file
+else
+	echo title: \"$post_srcname\" >> $file
+fi
 echo date: `date "+%Y-%m-%d %H:%M:%S"` >> $file
+
 
 if [ -n "$tags" ]; then
 	echo tags: $tags >> $file
