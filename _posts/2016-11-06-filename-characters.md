@@ -12,8 +12,8 @@ intensedebate: true
 Windows denied (9): \ / : * ? \" < > |
 ```
 
-###Windows
-####Quoting
+### Windows
+#### Quoting
 
 Quoting is used to remove the special meaning of certain characters or words to the shell. Quoting can be used to preserve the literal meaning of the special characters in the next paragraph; prevent reserved words from being recognised as such; and prevent parameter expansion and command substitution within here-document processing (see Here-document ).
 

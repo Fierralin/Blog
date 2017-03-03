@@ -25,7 +25,10 @@ layout: page
 </script>
 
 {% for post in paginator.posts %}
-  <h2 class="post-title" id="div-{{ post.date | date: '%Y-%m-%d-' }}{{post.url | remove: '/' }}">
+		{% assign post_str = post.url | replace: '/', '-' %}
+		{% assign post_str = post_str | remove: '.html'%}
+		{% assign post_str = post_str | remove_first: '-'%}
+  <h2 class="post-title" id="div-{{ post_str }}">
     <a href="{{post.url | prepend:site.baseurl}}">
       {{ post.title }}
     </a>
@@ -40,18 +43,17 @@ layout: page
     {% for tag in post.tags %}
     <li><a href="{{site.baseurl}}/tag/{{ tag }}">{{ tag }}</a></li>
     {% endfor %}
-	<li><a href="#div-{{ post.date | date: '%Y-%m-%d-' }}{{post.url | remove: '/' }}"
-			id="show-{{ post.date | date: '%Y-%m-%d-' }}{{post.url | remove: '/' }}"
-			onclick="showval='{{ post.date | date: '%Y-%m-%d-' }}{{post.url | remove: '/' }}';
+	<li><a href="#div-{{ post_str }}"
+			id="show-{{ post_str }}"
+			onclick="showval='{{ post_str }}';
 				showmoreless(showval, 'desc-'+showval ,'show-'+showval)"
-			style="float:right; padding-top: 1px"
 			title="Show More">
 			<img src='http://fierralin.github.com/images/arrow_show.png' height='18px' alt='&lt;'>
 	</a></li>
   </ul>
   </div>
 
-  <div id="desc-{{ post.date | date: '%Y-%m-%d-' }}{{post.url | remove: '/' }}"
+  <div id="desc-{{ post_str }}"
     class="post-descr">
     <p>
 	  <span style="color: honeydew">Description: </span>
@@ -59,12 +61,12 @@ layout: page
     </p>
   </div>
   
-  <div id="{{ post.date | date: '%Y-%m-%d-' }}{{post.url | remove: '/' }}"
+  <div id="{{ post_str }}"
 	class="post-content" style="display:none">
-	<div id="post-{{ post.date | date: '%Y-%m-%d-' }}{{post.url | remove: '/' }}"></div>
-	<a href="#div-{{ post.date | date: '%Y-%m-%d-' }}{{post.url | remove: '/' }}"
-		id="show-{{ post.date | date: '%Y-%m-%d-' }}{{post.url | remove: '/' }}"
-		onclick="showval='{{ post.date | date: '%Y-%m-%d-' }}{{post.url | remove: '/' }}';
+	<div id="post-{{ post_str }}"></div>
+	<a href="#div-{{ post_str }}"
+		id="show-{{ post_str }}"
+		onclick="showval='{{ post_str }}';
 			showmoreless(showval, 'desc-'+showval ,'show-'+showval)"
 		style="float:right"
 		title="Hide Contents">
@@ -72,7 +74,7 @@ layout: page
 	</a>
   </div>
   <script>
-    $( "#post-{{ post.date | date: '%Y-%m-%d-' }}{{post.url | remove: '/' }}" ).load( "{{post.url | prepend:site.baseurl}} #postcontent" );
+    $( "#post-{{ post_str }}" ).load( "{{post.url | prepend:site.baseurl}} #postcontent" );
   </script>
 {% endfor %}
 

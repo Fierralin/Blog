@@ -1,0 +1,61 @@
+{% include header.html %}
+
+<div class="wrapper">
+  <div class="content">
+    <div class="container container-center">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="article">
+            <div class="well">
+              <h1 class="well_headerlink"><a href="{{ site.baseurl | append:page.url }}">{{ page.title }}</a></h1>
+              <div class="post-meta">
+                <div class="post-time">
+                  <time>{{ page.date | date: '%d %h %Y %H:%M:%S' }}</time>
+                </div>
+                <ul>
+                  {% for tag in page.tags %}
+                    <li><a href="{{ site.baseurl }}/tag/{{ tag }}">{{ tag }}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+              <div id="postcontent" class="post-content">
+                <div id="toc" class="toc"></div>
+		<div style="font-family: fangsong; font-size: 15.7px; text-indent: 2em;">
+                {{ content }}
+		</div>
+                {% include share.html %}
+              </div>
+			  <nav class="article-previous fn-clear">
+				{% if page.previous %}
+				  <a class="prev" href="{{ site.baseurl|append:page.previous.url }}"
+				  rel="bookmark" title="{{page.previous.title}}">
+				    &laquo;&nbsp;{{ page.previous.title | truncatewords:5 }}
+				  </a>
+				{% endif %}
+				{% if page.next %}
+				  <a class="next" href="{{ site.baseurl|append:page.next.url }}"
+				  rel="bookmark" title="{{page.next.title}}" style="float:right">
+				    {{ page.next.title | truncatewords:5 }}&nbsp;&raquo;
+				  </a>
+				{% endif %}
+			  </nav>
+			  {% include intense-debate-comments.html %}
+			  {% include disqus-comments.html %}
+			  {% include duoshuo-comments.html %}
+              {% if page.youyan %}
+				<!-- UY BEGIN -->
+				<div id="uyan_frame"></div>
+				<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2122547"></script>
+				<!-- UY END -->
+			  {% endif %}
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 hidden-xs">
+          {% include sidebar.html %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include footer.html %}
+</div>

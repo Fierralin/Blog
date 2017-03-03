@@ -78,7 +78,7 @@ if [ -n "$post_title" ]; then
 else
 	echo title: \"$post_srcname\" >> $file
 fi
-echo date: `date "+%Y-%m-%d %H:%M:%S"` >> $file
+echo date: `date "+%Y-%m-%d %H:%M:%S"` +0800  >> $file
 
 
 if [ -n "$tags" ]; then

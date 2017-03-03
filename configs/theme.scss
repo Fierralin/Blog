@@ -28,7 +28,7 @@ $accent-color: LightSkyBlue;    // original =)
 body {
   padding-top: 80px;
   color: snow;
-  background-color: #292929; // #292929
+  background-color: #2f2f2f; // #292929
   background-image: url(http://fierralin.github.com/images/triangles.png);
 }
 .copyright {
@@ -246,8 +246,8 @@ div.post-meta {
 //   |_||_\___\__,_\__,_\___|_|
 //
 nav a {
-  padding-top: 20px !important;
-  padding-bottom: 20px !important;
+  padding-top: 9px !important;
+  padding-bottom: 9px !important;
   @include transition(color 0.31s);
   font-size: 18px;
   font-family: Tahoma, FangSong;
@@ -267,12 +267,12 @@ nav.navbar.shrink {
   height: inherit;
 }
 nav.shrink a {
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
   font-size: 15px;
 }
 nav.shrink .navbar-brand {
-  font-size: 30px;
+  font-size: 18px;
   height: inherit;
 }
 .navbar .navbar-nav {
