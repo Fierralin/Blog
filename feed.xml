@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom">
+	<channel>
+		<title>Fierralin Technica</title>
+		<description>Software Developer</description>
+		<link>http://fierralin.github.io/Technica</link>
+		<atom:link href="http://fierralin.github.io/Technica/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>Pong from Pixels</title>
+				<description>&lt;p&gt;&lt;a href=&quot;http://karpathy.github.io/2016/05/31/rl/&quot;&gt;Here&lt;/a&gt;.&lt;/p&gt;
+</description>
+				<pubDate>Thu, 07 Sep 2017 01:25:06 +0800</pubDate>
+				<link>http://fierralin.github.io/Technica/2017/09/Pong-from-Pixels</link>
+				<guid isPermaLink="true">http://fierralin.github.io/Technica/2017/09/Pong-from-Pixels</guid>
+			</item>
+		
+			<item>
+				<title>Deep Reinforcement Learning with a Natural Language Action Space</title>
+				<description>&lt;h4 id=&quot;abstract&quot;&gt;Abstract&lt;/h4&gt;
+
+&lt;p&gt;This paper introduces a novel architecture for reinforcement learning with deep neural networks designed to handle state and action spaces characterized by natural&lt;br /&gt;
+language.&lt;/p&gt;
+
+&lt;p&gt;文章提出了一个处理自然语言状态和动作空间的带深度神经网络的增强学习架构。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Deep reinforcement relevance network (DRRN) (深度增强现实网络??????)&lt;/em&gt;&lt;/strong&gt; &lt;strong&gt;:&lt;/strong&gt;&lt;br /&gt;
+It represents action and state spaces with separate embedding vectors, which are combined with an interaction function to approximate the Q-function in reinforcement learning.&lt;/p&gt;
+
+&lt;p&gt;将动作空间和状态空间用用分离的嵌入向量表示，并且两者都有一个与相配套的交互函数来近似增强学习之Q函数。&lt;/p&gt;
+
+&lt;h4 id=&quot;drrn&quot;&gt;DRRN&lt;/h4&gt;
+
+&lt;h6 id=&quot;drrn-architecture-forward-activation&quot;&gt;DRRN architecture: Forward activation&lt;/h6&gt;
+
+&lt;h6 id=&quot;learning-the-drrn-back-propagation&quot;&gt;Learning the DRRN: Back propagation&lt;/h6&gt;
+</description>
+				<pubDate>Thu, 07 Sep 2017 00:25:12 +0800</pubDate>
+				<link>http://fierralin.github.io/Technica/2017/09/DRL-with-a-natural-language-action-space</link>
+				<guid isPermaLink="true">http://fierralin.github.io/Technica/2017/09/DRL-with-a-natural-language-action-space</guid>
+			</item>
+		
+			<item>
+				<title>DRL Survey</title>
+				<description>&lt;h4 id=&quot;trend-1-main-challenges-in-deep-reinforcement-learning&quot;&gt;Trend 1: Main Challenges in Deep Reinforcement Learning&lt;/h4&gt;
+
+&lt;h6 id=&quot;unappropriate-approximation-function&quot;&gt;Unappropriate approximation function.&lt;/h6&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Small network may fail to approximate Q function.&lt;/li&gt;
+  &lt;li&gt;Large network can lead to overfitting.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;@ Existing works focused on carefully tuning of the network size and hyperparameters can help.&lt;/p&gt;
+
+&lt;h6 id=&quot;trend-2-moving-target&quot;&gt;Trend 2: Moving target.&lt;/h6&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Learning moves with training batch.&lt;/li&gt;
+  &lt;li&gt;The target changes result in oscillation and divergence of the network.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;@ Existing works [1] proposed the regular updating method with the aim to fix the target value.&lt;/p&gt;
+
+&lt;h6 id=&quot;trend-3-maximization-bias&quot;&gt;Trend 3: Maximization bias.&lt;/h6&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The network may overestimate the Q function.&lt;/li&gt;
+  &lt;li&gt;This leads to the poor performance.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;@ Double Q Learning [2] can help.&lt;/p&gt;
+
+&lt;h6 id=&quot;trend-4&quot;&gt;Trend 4:&lt;/h6&gt;
+
+&lt;h6 id=&quot;biased-data-in-memory&quot;&gt;Biased data in memory&lt;/h6&gt;
+</description>
+				<pubDate>Thu, 07 Sep 2017 00:25:06 +0800</pubDate>
+				<link>http://fierralin.github.io/Technica/2017/09/DRL-Survey</link>
+				<guid isPermaLink="true">http://fierralin.github.io/Technica/2017/09/DRL-Survey</guid>
+			</item>
+		
+			<item>
+				<title>Django Configuration</title>
+				<description>&lt;h2 id=&quot;django-configuration&quot;&gt;Django Configuration&lt;/h2&gt;
+
+&lt;p&gt;参考&lt;a href=&quot;http://www.cnblogs.com/Liqiongyu/p/5909706.html&quot;&gt;从开发到部署，使用django创建一个简单可用的个人博客&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h4 id=&quot;create-project-and-init&quot;&gt;Create Project and Init&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;~# django-admin startproject sitename&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;~# cd sitename&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;~/sitename# python3 manage.py startapp appname&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;~/sitename# python3 manage.py migrate&lt;/code&gt; 创建数据库。注意，1.9之前的版本是&lt;code class=&quot;highlighter-rouge&quot;&gt;python3 manage.py syncdb&lt;/code&gt;，今改了&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;~/sitename# python3 manage.py createsuperuser&lt;/code&gt; 创建超级用户，用来登录控制台&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;~/sitename# python3 manage.py runserver 0.0.0.0:9876&lt;/code&gt; 运行服务，可以在外面访问，但是要开放相应防火墙端口&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;djangoueditor&quot;&gt;DjangoUeditor&lt;/h4&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;pip install DjangoUeditor&lt;/code&gt; 这个存在问题，后来发现是因为DjangoUeditor基于python 2.7，不支持python3，改用DjangoUeditor3即可&lt;br /&gt;
+以下是DjangoUeditor3做法：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;下载 &lt;a href=&quot;https://github.com/twz915/DjangoUeditor3&quot;&gt;DjangoUeditor3&lt;/a&gt;，并将其中的&lt;code class=&quot;highlighter-rouge&quot;&gt;DjangoUeditor&lt;/code&gt;目录放到&lt;code class=&quot;highlighter-rouge&quot;&gt;~/sitename&lt;/code&gt;下面&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;~/sitename/sitename/settings.py&lt;/code&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;INSTALLED_APPS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;'blog'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;'DjangoUeditor'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;~/sitename/sitename/url.py&lt;/code&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;DjangoUeditor&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urls&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;djud_urls&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;django.conf&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;settings&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;urlpatterns&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;r'^admin/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;admin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;urls&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;r'^ueditor/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;djud_urls&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;settings&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DEBUG&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;django.conf.urls.static&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;static&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;urlpatterns&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;static&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;settings&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MEDIA_URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;document_root&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;settings&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MEDIA_ROOT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;~/sitename/sitename/settings.py&lt;/code&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;STATIC_URL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'/static/'&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;STATICFILES_DIRS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BASE_DIR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;common_static&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BASE_DIR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;static&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;UPLOAD_URL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'/upload/'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;UPLOAD_ROOT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BASE_DIR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'static'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;STATICFILES_FINDERS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&quot;django.contrib.staticfiles.finders.FileSystemFinder&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&quot;django.contrib.staticfiles.finders.AppDirectoriesFinder&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;~/sitename/blog/models.py&lt;/code&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;DjangoUeditor.models&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UEditorField&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Article&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;models&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;#content = models.TextField(blank=True, null=True)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;content&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UEditorField&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u&quot;Contents&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;height&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;width&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;u''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;blank&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;imagePath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;uploads/blog/images/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                           &lt;span class=&quot;n&quot;&gt;toolbars&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'besttome'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filePath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'uploads/blog/files/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;最后更新数据库：&lt;code class=&quot;highlighter-rouge&quot;&gt;python3 manage.py migrate&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;python3 manage.py runserver&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;django--view--url-&quot;&gt;Django 添加 view 和 url 的逻辑&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;~/sitename/blog/views.py&lt;/code&gt; 添加：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpResponse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;just a test&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;~/sitename/blog/urls.py&lt;/code&gt; 添加：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;django.conf.urls&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;views&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;urlpatterns&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;r'^test/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;views&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;blog_test&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;~/sitename/sitename/urls.py&lt;/code&gt; 里的 &lt;code class=&quot;highlighter-rouge&quot;&gt;urlpatterns&lt;/code&gt; 添加一行：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;urlpatterns&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;r'^blog/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blog_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;section&quot;&gt;使用模板&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;首先在 &lt;code class=&quot;highlighter-rouge&quot;&gt;~/sitename/sitename/settings.py&lt;/code&gt; 里面修改 &lt;code class=&quot;highlighter-rouge&quot;&gt;'DIRS': [],&lt;/code&gt; 为 &lt;code class=&quot;highlighter-rouge&quot;&gt;'DIRS': [BASE_DIR+&quot;/templates&quot;,],&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mkdir ~/sitename/sitename/templates&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;添加 &lt;code class=&quot;highlighter-rouge&quot;&gt;testtemplate.html&lt;/code&gt; 到该目录，文件里面写上 ``&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;~/sitename/blog/views.py&lt;/code&gt; 添加&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;django.shortcuts&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;datetime&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;TestTemplate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'blog/testtemplate.html'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'current_time'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()})&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;~/sitename/blog/urls.py&lt;/code&gt; 的 &lt;code class=&quot;highlighter-rouge&quot;&gt;urlpatterns&lt;/code&gt; 添加一行引入&lt;code class=&quot;highlighter-rouge&quot;&gt;blog&lt;/code&gt;的&lt;code class=&quot;highlighter-rouge&quot;&gt;urls&lt;/code&gt;：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;urlpatterns&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;r'^test/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;views&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;only_test&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;r'^testview/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;views&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TestView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;view_test&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;r'^testtemplate/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;views&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TestTemplate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;template_test&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;markdown-support&quot;&gt;Markdown support&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;MarkupField&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;# zypper install python-pygments&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;pygmentize -S default -f html -a .codehilite &amp;gt; code.css&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+				<pubDate>Thu, 10 Aug 2017 00:44:06 +0800</pubDate>
+				<link>http://fierralin.github.io/Technica/2017/08/django-configuration</link>
+				<guid isPermaLink="true">http://fierralin.github.io/Technica/2017/08/django-configuration</guid>
+			</item>
+		
+			<item>
+				<title>gdb</title>
+				<description>&lt;h2 id=&quot;gdb-&quot;&gt;GDB 命令總覽&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;baidie&lt;/code&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;gdb--1&quot;&gt;GDB 命令&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Command&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Descriptions&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;help&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;h&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;x&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;apropros&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;x&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;complete&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;x&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;info&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;查看信息&lt;br /&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;i threads&lt;/code&gt;/&lt;code class=&quot;highlighter-rouge&quot;&gt;i th&lt;/code&gt;: 查看綫程信息&lt;br /&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;i break&lt;/code&gt;/&lt;code class=&quot;highlighter-rouge&quot;&gt;i b&lt;/code&gt;: 查看斷點信息&lt;br /&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;i args&lt;/code&gt;: 列出參數&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;set&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;x&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;show&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;x&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;bsd &amp;lt;em&amp;gt;dfsdf&amp;lt;/em&amp;gt; &lt;/code&gt;&lt;br /&gt;
+&lt;code&gt;dfsd &lt;em&gt;dfsfs&lt;/em&gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Command&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Descriptions&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;backtrace&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;bt&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;frame&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;f&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;list&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;l&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;列出源代碼&lt;br /&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;l 10&lt;/code&gt;: 列出從10行開始的源代碼&lt;br /&gt;&lt;code&gt;l &lt;em&gt;func_name&lt;/em&gt;&lt;/code&gt;: 列出某個函數的源代碼&lt;br /&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;l 10 20&lt;/code&gt;: 列出10行到20行之間的代碼&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;print&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;p&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;quit&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;q&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;gdb--2&quot;&gt;GDB 下運行程序&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;x&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;x&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;break&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;創建斷點&lt;br /&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;b file_name.c:300&lt;/code&gt;: 設置文件具體行爲斷點&lt;br /&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;b function_name&lt;/code&gt;: 設置某函數爲斷點&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;section&quot;&gt;調試代碼&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;x&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;x&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;run&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;r&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;next&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;n&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;step&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;s&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;gdb--3&quot;&gt;GDB 多綫程調試&lt;/h2&gt;
+</description>
+				<pubDate>Wed, 09 Aug 2017 00:25:06 +0800</pubDate>
+				<link>http://fierralin.github.io/Technica/2017/08/gdb</link>
+				<guid isPermaLink="true">http://fierralin.github.io/Technica/2017/08/gdb</guid>
+			</item>
+		
+			<item>
+				<title>Paxos</title>
+				<description>&lt;p&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/Paxos%E7%AE%97%E6%B3%95&quot;&gt;wiki&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.zhihu.com/question/19787937&quot;&gt;zhihu&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;分布式系统中节点通信存在两个模型&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;共享内存 Shared Memory&lt;/li&gt;
+  &lt;li&gt;消息传递 Messages passing&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;paxos&quot;&gt;Paxos城邦&lt;/h3&gt;
+&lt;h4 id=&quot;section-1&quot;&gt;人员&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Proposers&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;提出提案&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;proposal&lt;/code&gt;&lt;/strong&gt;(&lt;code class=&quot;highlighter-rouge&quot;&gt;number&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;value&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Acceptors&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;只能接受(accept)提案&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Learners&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;只能学习提案&lt;/li&gt;
+  &lt;li&gt;只能获得被批准(chosen)的&lt;code class=&quot;highlighter-rouge&quot;&gt;value&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;proposal&quot;&gt;提案&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;proposal&lt;/code&gt;&lt;/strong&gt;&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;属性&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;number&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;h2 id=&quot;value&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;value&lt;/code&gt;&lt;/strong&gt;&lt;/h2&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;section-2&quot;&gt;规则&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;P1：一个acceptor必须接受（accept）第一次收到的提案。&lt;/li&gt;
+  &lt;li&gt;P1a：当且仅当acceptor没有回应过编号大于n的prepare请求时，acceptor接受（accept）编号为n的提案。&lt;/li&gt;
+  &lt;li&gt;P2：一旦一个具有value v的提案被批准，则之后任何proposer提出的提案必须具有value v —— 此处包含了：之后被批准的提案必须具有value v；accepotor再次接受的提案必须具有value v&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+				<pubDate>Fri, 07 Jul 2017 00:55:06 +0800</pubDate>
+				<link>http://fierralin.github.io/Technica/2017/07/Paxos-Learning</link>
+				<guid isPermaLink="true">http://fierralin.github.io/Technica/2017/07/Paxos-Learning</guid>
+			</item>
+		
+			<item>
+				<title>ib record</title>
+				<description>&lt;div id=&quot;cnblogs_post_body&quot;&gt;&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;color: #ff00ff&quot;&gt;2016-08-26 ib1&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;div&gt;ib0不见了&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;0000:04:00.0 'MT27500 Family [ConnectX-3]'&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;做法：如果直接绑定不行，那就试试vf的那个&lt;/div&gt;
+&lt;div&gt;总之试试在先&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;connectx_port_config修改ib网卡的模式为Ethernet&lt;/div&gt;
+&lt;div&gt;然后&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;&lt;strong&gt;&lt;span style=&quot;color: #ff00ff&quot;&gt;2016-08-28&amp;nbsp;setup.sh igb_uio+vfio&lt;/span&gt;&lt;/strong&gt;&lt;/div&gt;
+&lt;div&gt;
+&lt;div&gt;只有vfio不行&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;librte_pmd_mlx4: cannot access device, is mlx4_ib loaded?&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;libibverbs&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;If you intend to use&amp;nbsp;dynamic libraries, you should uninstall libibverbs,&amp;nbsp;libmlx4 and related packages first.&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;0828新试：&lt;/div&gt;
+&lt;div&gt;&lt;span style=&quot;color: #222222; font-family: &amp;quot;Helvetica Neue&amp;quot;, Arial, sans-serif&quot;&gt;Ethernet+mtcp看看行不行&lt;/span&gt;&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;&lt;span style=&quot;color: #222222; font-family: &amp;quot;Helvetica Neue&amp;quot;, Arial, sans-serif&quot;&gt;还是不行，应该最终还是不行。下周试试dpdk2.2&lt;/span&gt;&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;&lt;strong&gt;&lt;span style=&quot;color: #ff00ff&quot;&gt;&amp;nbsp;2016-08-29&amp;nbsp;some commands&lt;/span&gt;&lt;/strong&gt;&lt;/div&gt;
+&lt;div&gt;
+&lt;div&gt;mstflint -d 04:00.0 q&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;ConnectX PCI devices :&lt;/div&gt;
+&lt;div&gt;|----------------------------|&lt;/div&gt;
+&lt;div&gt;| 1&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;0000:04:00.0 |&lt;/div&gt;
+&lt;div&gt;|----------------------------|&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;Before port change:&lt;/div&gt;
+&lt;div&gt;auto (ib)&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;死活只有一个端口，没有俩端口~&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;./configure&amp;nbsp;--with-mlx4_fc-mod&amp;nbsp;&amp;nbsp;--with-mlx4_inf-mod&amp;nbsp;--with-core-mod&amp;nbsp;--with-user_mad-mod&amp;nbsp;--with-user_access-mod&amp;nbsp;--with-addr_trans-mod&amp;nbsp;--with-mlx4-mod&amp;nbsp;--with-mlx4_en-mod&amp;nbsp;--with-ipoib-mod&amp;nbsp;--with-srp-mod&amp;nbsp;--with-rds-mod&amp;nbsp;--with-iser-mod&amp;nbsp;--kernel-version=3.10.0-mlx&amp;nbsp;--modules-dir=/lib/modules/3.10.0-mlx/&amp;nbsp;--kernel-sources=/work/kernel-3.10.0-123.el7.src/linux-3.10.0-123.el7&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;/usr/bin/ld: cannot find /root/pool/install/usr/local/lib: File format not recognized&lt;/div&gt;
+&lt;div&gt;collect2: error: ld returned 1 exit status&lt;/div&gt;
+&lt;div&gt;/root/dpdk/mk/rte.app.mk:230: recipe for target 'test' failed&lt;/div&gt;
+&lt;div&gt;make[4]: *** [test] Error 1&lt;/div&gt;
+&lt;div&gt;/root/dpdk/mk/rte.subdir.mk:61: recipe for target 'test' failed&lt;/div&gt;
+&lt;div&gt;make[3]: *** [test] Error 2&lt;/div&gt;
+&lt;div&gt;/root/dpdk/mk/rte.sdkbuild.mk:78: recipe for target 'app' failed&lt;/div&gt;
+&lt;div&gt;make[2]: *** [app] Error 2&lt;/div&gt;
+&lt;div&gt;/root/dpdk/mk/rte.sdkroot.mk:123: recipe for target 'all' failed&lt;/div&gt;
+&lt;div&gt;make[1]: *** [all] Error 2&lt;/div&gt;
+&lt;div&gt;Makefile:12: recipe for target 'all' failed&lt;/div&gt;
+&lt;div&gt;make: *** [all] Error 2&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;
+&lt;p&gt;&lt;span style=&quot;color: #ff00ff&quot;&gt;&lt;strong&gt;2016-08-29 ib0&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;div&gt;-w 0000:04:00.0&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;
+&lt;div&gt;&lt;em&gt;1.&amp;nbsp;Install&amp;nbsp;OFED,&amp;nbsp;run&amp;nbsp;/etc/init.d/openibd&amp;nbsp;restart&lt;/em&gt;&lt;/div&gt;
+&lt;div&gt;&lt;em&gt;2.&amp;nbsp;Compile&amp;nbsp;DPDK&amp;nbsp;with&amp;nbsp;&lt;/em&gt;&lt;em&gt;the&amp;nbsp;CONFIG_RTE_LIBRTE_MLX4_PMD=y &amp;nbsp;&lt;/em&gt; &amp;lt;dpdkdir&amp;gt;/config/common_base&lt;/div&gt;
+&lt;div&gt;&lt;em&gt;3.&amp;nbsp;Set&amp;nbsp;up&amp;nbsp;hugepages&lt;/em&gt;&lt;/div&gt;
+&lt;div&gt;&lt;em&gt;4.&amp;nbsp;Load&amp;nbsp;kernel&amp;nbsp;&lt;/em&gt;&lt;em&gt;modules&lt;/em&gt;&lt;/div&gt;
+&lt;div&gt;&lt;em&gt;5.&amp;nbsp;Run&amp;nbsp;testpmd&lt;/em&gt;&lt;/div&gt;
+&lt;div&gt;&lt;em&gt;&amp;nbsp;&lt;/em&gt;&lt;/div&gt;
+&lt;div&gt;
+&lt;div&gt;modprobe&amp;nbsp;-a&amp;nbsp;ib_uverbs&amp;nbsp;mlx4_en&amp;nbsp;mlx4_core&amp;nbsp;mlx4_ib&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;export&amp;nbsp;RTE_SDK=/root/dpdk&lt;/div&gt;
+&lt;div&gt;export&amp;nbsp;RTE_TARGET=x86_64-native-linuxapp-gcc&lt;/div&gt;
+&lt;div&gt;&lt;span style=&quot;color: #111111; font-family: Arial, Helvetica, sans-serif; font-size: small&quot;&gt;make&lt;/span&gt;&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;mkdir&amp;nbsp;-p&amp;nbsp;/mnt/huge&lt;/div&gt;
+&lt;div&gt;mount&amp;nbsp;-t&amp;nbsp;hugetlbfs&amp;nbsp;nodev&amp;nbsp;/mnt/huge&lt;/div&gt;
+&lt;div&gt;echo&amp;nbsp;64&amp;nbsp;&amp;gt;&amp;nbsp;/sys/devices/system/node/node0/hugepages/hugepages-2048kB/nr_hugepages&lt;/div&gt;
+&lt;div&gt;modprobe&amp;nbsp;-a&amp;nbsp;ib_uverbs&amp;nbsp;mlx4_en&amp;nbsp;mlx4_core&amp;nbsp;mlx4_ib&lt;/div&gt;
+&lt;div&gt;/etc/init.d/openibd&amp;nbsp;restart&lt;/div&gt;
+&lt;div&gt;
+&lt;div&gt;ls&amp;nbsp;-d&amp;nbsp;/sys/class/net/*/device/infiniband_verbs/uverbs*&amp;nbsp;|&amp;nbsp;cut&amp;nbsp;-d&amp;nbsp;/&amp;nbsp;-f&amp;nbsp;5&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;(cd&amp;nbsp;&quot;/sys/class/net/eth2/device/&quot;&amp;nbsp;&amp;amp;&amp;amp;&amp;nbsp;pwd&amp;nbsp;-P) |&amp;nbsp;sed&amp;nbsp;-n&amp;nbsp;'s,.*/&lt;span class=&quot;MathJax_Preview&quot; style=&quot;color: inherit;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;MathJax&quot; id=&quot;MathJax-Element-1-Frame&quot; tabindex=&quot;0&quot; data-mathml=&quot;&lt;math xmlns=&amp;quot;http://www.w3.org/1998/Math/MathML&amp;quot;&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mo&gt;&amp;amp;#x2217;&lt;/mo&gt;&lt;/math&gt;&quot; role=&quot;presentation&quot; style=&quot;position: relative;&quot;&gt;&lt;nobr aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;math&quot; id=&quot;MathJax-Span-1&quot; role=&quot;math&quot; style=&quot;width: 1.043em; display: inline-block;&quot;&gt;&lt;span style=&quot;display: inline-block; position: relative; width: 0.904em; height: 0px; font-size: 111%;&quot;&gt;&lt;span style=&quot;position: absolute; clip: rect(1.459em 1000.84em 2.36em -999.997em); top: -2.145em; left: 0.003em;&quot;&gt;&lt;span class=&quot;mrow&quot; id=&quot;MathJax-Span-2&quot;&gt;&lt;span class=&quot;mo&quot; id=&quot;MathJax-Span-3&quot; style=&quot;font-family: MathJax_Main;&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mo&quot; id=&quot;MathJax-Span-4&quot; style=&quot;font-family: MathJax_Main; padding-left: 0.142em;&quot;&gt;∗&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;display: inline-block; width: 0px; height: 2.152em;&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;display: inline-block; overflow: hidden; vertical-align: -0.073em; border-left: 0px solid; width: 0px; height: 0.696em;&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/nobr&gt;&lt;span class=&quot;MJX_Assistive_MathML&quot; role=&quot;presentation&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mo&gt;∗&lt;/mo&gt;&lt;/math&gt;&lt;/span&gt;&lt;/span&gt;&lt;script type=&quot;math/tex&quot; id=&quot;MathJax-Element-1&quot;&gt;.*&lt;/script&gt;,-w&amp;nbsp;\1,p'&lt;/div&gt;
+&lt;div&gt;echo&amp;nbsp;1024&amp;nbsp;&amp;gt;&amp;nbsp;/sys/kernel/mm/hugepages/hugepages-2048kB/nr_hugepages/nr_hugepages&lt;/div&gt;
+&lt;div&gt;./tools/dpdk-devbind.py --bind=mlx4_core 04:00.0&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;Cannot open /sys/bus/pci/drivers/mlnx_core/bind&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;&lt;span style=&quot;color: #111111; font-family: Arial, Helvetica, sans-serif; font-size: small&quot;&gt;两个地方的.config文件都改了，希望可以&lt;/span&gt;&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;&lt;strong&gt;&lt;span style=&quot;color: #ff00ff; font-family: Arial, Helvetica, sans-serif; font-size: small&quot;&gt;2016-08-29 useless&lt;/span&gt;&lt;/strong&gt;&lt;/div&gt;
+&lt;div&gt;
+&lt;div&gt;librte_pmd_mlx4: cannot access device, is mlx4_ib loaded?&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;EAL: Detected 16 lcore(s)&lt;/div&gt;
+&lt;div&gt;EAL: Probing VFIO support...&lt;/div&gt;
+&lt;div&gt;EAL: VFIO support initialized&lt;/div&gt;
+&lt;div&gt;PMD: bnxt_rte_pmd_init() called for (null)&lt;/div&gt;
+&lt;div&gt;EAL: PCI device 0000:04:00.0 on NUMA socket 0&lt;/div&gt;
+&lt;div&gt;EAL:&amp;nbsp; &amp;nbsp;probe driver: 15b3:1003 librte_pmd_mlx4&lt;/div&gt;
+&lt;div&gt;PMD: librte_pmd_mlx4: PCI information matches, using device &quot;mlx4_0&quot; (VF: false)&lt;/div&gt;
+&lt;div&gt;PMD: librte_pmd_mlx4: 1 port(s) detected&lt;/div&gt;
+&lt;div&gt;PMD: librte_pmd_mlx4: port 1 MAC address is 46:c9:20:00:36:f0&lt;/div&gt;
+&lt;div&gt;Interactive-mode selected&lt;/div&gt;
+&lt;div&gt;USER1: create a new mbuf pool &amp;lt;mbuf_pool_socket_0&amp;gt;: n=203456, size=2176, socket=0&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;Warning! Cannot handle an odd number of ports with the current port topology. Configuration must be changed to have an even number of ports, or relaunch application with --port-topology=chained&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;Configuring Port 0 (socket 0)&lt;/div&gt;
+&lt;div&gt;PMD: librte_pmd_mlx4: 0xae7840: TX queues number update: 0 -&amp;gt; 1&lt;/div&gt;
+&lt;div&gt;PMD: librte_pmd_mlx4: 0xae7840: RX queues number update: 0 -&amp;gt; 1&lt;/div&gt;
+&lt;div&gt;PMD: librte_pmd_mlx4: mempool 0x7f454147dec0: not virtually contiguous&lt;/div&gt;
+&lt;div&gt;PMD: librte_pmd_mlx4: mempool 0x7f454147dec0: not virtually contiguous&lt;/div&gt;
+&lt;div&gt;PMD: librte_pmd_mlx4: 0xae7840: MR creation failure: Invalid argument&lt;/div&gt;
+&lt;div&gt;Fail to configure port 0 rx queues&lt;/div&gt;
+&lt;div&gt;EAL: Error - exiting with code: 1&lt;/div&gt;
+&lt;div&gt;&amp;nbsp; Cause: Start ports failed&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;root@node112~/dpdk# ./x86_64-native-linuxapp-gcc/app&lt;strong&gt;/testpmd -c 0xff00 -n 4 -w 0000:04:00.0 -w 0000:03:00.1 -- -i&lt;/strong&gt;&lt;/div&gt;
+&lt;div&gt;EAL: Detected 16 lcore(s)&lt;/div&gt;
+&lt;div&gt;EAL: Probing VFIO support...&lt;/div&gt;
+&lt;div&gt;EAL: VFIO support initialized&lt;/div&gt;
+&lt;div&gt;PMD: bnxt_rte_pmd_init() called for (null)&lt;/div&gt;
+&lt;div&gt;EAL: PCI device 0000:03:00.1 on NUMA socket -1&lt;/div&gt;
+&lt;div&gt;EAL:&amp;nbsp; &amp;nbsp;probe driver: 8086:1510 rte_igb_pmd&lt;/div&gt;
+&lt;div&gt;EAL: PCI device 0000:04:00.0 on NUMA socket 0&lt;/div&gt;
+&lt;div&gt;EAL:&amp;nbsp; &amp;nbsp;probe driver: 15b3:1003 librte_pmd_mlx4&lt;/div&gt;
+&lt;div&gt;PMD: librte_pmd_mlx4: PCI information matches, using device &quot;mlx4_0&quot; (VF: false)&lt;/div&gt;
+&lt;div&gt;PMD: librte_pmd_mlx4: 1 port(s) detected&lt;/div&gt;
+&lt;div&gt;PMD: librte_pmd_mlx4: port 1 MAC address is 46:c9:20:00:36:f0&lt;/div&gt;
+&lt;div&gt;Interactive-mode selected&lt;/div&gt;
+&lt;div&gt;USER1: create a new mbuf pool &amp;lt;mbuf_pool_socket_0&amp;gt;: n=203456, size=2176, socket=0&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;Warning! Cannot handle an odd number of ports with the current port topology. Configuration must be changed to have an even number of ports, or relaunch application with --port-topology=chained&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;Configuring Port 0 (socket 0)&lt;/div&gt;
+&lt;div&gt;PMD: librte_pmd_mlx4: 0xae7840: TX queues number update: 0 -&amp;gt; 1&lt;/div&gt;
+&lt;div&gt;PMD: librte_pmd_mlx4: 0xae7840: RX queues number update: 0 -&amp;gt; 1&lt;/div&gt;
+&lt;div&gt;PMD: librte_pmd_mlx4: mempool 0x7fb11447dec0: not virtually contiguous&lt;/div&gt;
+&lt;div&gt;PMD: librte_pmd_mlx4: mempool 0x7fb11447dec0: not virtually contiguous&lt;/div&gt;
+&lt;div&gt;PMD: librte_pmd_mlx4: 0xae7840: MR creation failure: Invalid argument&lt;/div&gt;
+&lt;div&gt;Fail to configure port 0 rx queues&lt;/div&gt;
+&lt;div&gt;EAL: Error - exiting with code: 1&lt;/div&gt;
+&lt;div&gt;&amp;nbsp; Cause: Start ports failed&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;root@node112~/dpdk# &lt;strong&gt;./examples/l2fwd/build/l2fwd -c1 -n1 -- -p1&lt;/strong&gt;&lt;/div&gt;
+&lt;div&gt;EAL: Detected 16 lcore(s)&lt;/div&gt;
+&lt;div&gt;EAL: Probing VFIO support...&lt;/div&gt;
+&lt;div&gt;EAL: VFIO support initialized&lt;/div&gt;
+&lt;div&gt;PMD: bnxt_rte_pmd_init() called for (null)&lt;/div&gt;
+&lt;div&gt;EAL: PCI device 0000:03:00.0 on NUMA socket -1&lt;/div&gt;
+&lt;div&gt;EAL:&amp;nbsp; &amp;nbsp;probe driver: 8086:1510 rte_igb_pmd&lt;/div&gt;
+&lt;div&gt;EAL: PCI device 0000:03:00.1 on NUMA socket -1&lt;/div&gt;
+&lt;div&gt;EAL:&amp;nbsp; &amp;nbsp;probe driver: 8086:1510 rte_igb_pmd&lt;/div&gt;
+&lt;div&gt;EAL: PCI device 0000:04:00.0 on NUMA socket 0&lt;/div&gt;
+&lt;div&gt;EAL:&amp;nbsp; &amp;nbsp;probe driver: 15b3:1003 librte_pmd_mlx4&lt;/div&gt;
+&lt;div&gt;PMD: librte_pmd_mlx4: PCI information matches, using device &quot;mlx4_0&quot; (VF: false)&lt;/div&gt;
+&lt;div&gt;PMD: librte_pmd_mlx4: 1 port(s) detected&lt;/div&gt;
+&lt;div&gt;PMD: librte_pmd_mlx4: port 1 MAC address is 46:c9:20:00:36:f0&lt;/div&gt;
+&lt;div&gt;Notice: odd number of ports in portmask.&lt;/div&gt;
+&lt;div&gt;Lcore 0: RX port 0&lt;/div&gt;
+&lt;div&gt;Initializing port 0... PMD: librte_pmd_mlx4: 0x84a9c0: TX queues number update: 0 -&amp;gt; 1&lt;/div&gt;
+&lt;div&gt;PMD: librte_pmd_mlx4: 0x84a9c0: RX queues number update: 0 -&amp;gt; 1&lt;/div&gt;
+&lt;div&gt;PMD: librte_pmd_mlx4: 0x7fff41b6c8e0: flow configuration failed, errno=38: Function not implemented&lt;/div&gt;
+&lt;div&gt;PMD: librte_pmd_mlx4: 0x84a9c0: QP flow attachment failed: Function not implemented&lt;/div&gt;
+&lt;div&gt;EAL: Error - exiting with code: 1&lt;/div&gt;
+&lt;div&gt;&amp;nbsp; Cause: rte_eth_rx_queue_setup:err=-38, port=0&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;&lt;strong&gt;&lt;span style=&quot;color: #ff00ff&quot;&gt;2016-08-30&amp;nbsp;details&lt;/span&gt;&lt;/strong&gt;&lt;/div&gt;
+&lt;div&gt;
+&lt;div&gt;整理一：&lt;/div&gt;
+&lt;div&gt;1, &amp;lt;dpdk&amp;gt;/config/common_base: set&amp;nbsp;&lt;em&gt;CONFIG_RTE_LIBRTE_MLX4_PMD = y&lt;/em&gt;&lt;/div&gt;
+&lt;div&gt;2,&amp;nbsp;modprobe -a ib_uverbs mlx4_en mlx4_core mlx4_ib&lt;/div&gt;
+&lt;div&gt;3,&amp;nbsp;/etc/init.d/openibd restart&lt;/div&gt;
+&lt;div&gt;4, build dpdk &amp;amp; setup hugepages&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;不需要将网卡用igb_uio或vfio绑定，直接运行dpdk的l2fwd程序能够自动找到对应网卡&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;整理二：&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;./build/build/app/test-pmd/testpmd -c 0xf -n 4 -w 0000:01:00.0 -- --rxq=2 --txq=2 -i&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;&lt;strong&gt;&lt;span style=&quot;color: #ff00ff&quot;&gt;2016-12-02 next&lt;/span&gt;&lt;/strong&gt;&lt;/div&gt;
+&lt;div&gt;
+&lt;div&gt;要不要试一试ofed2.4看看，虽然它说不能在debian8.3上面搞，但是可以试试，它的内核可以支持到3.18，目前debian的内核是3.16&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;Failed to check for authentication: GDBus.Error:org.freedesktop.PolicyKit1.Error.&lt;/div&gt;
+&lt;div&gt;Failed: Action org.freedesktop.packagekit.system-update is not registered&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;&lt;strong&gt;&lt;span style=&quot;color: #ff00ff&quot;&gt;2016-12-19 pica8&lt;/span&gt;&lt;/strong&gt;&lt;/div&gt;
+&lt;div&gt;
+&lt;div&gt;ovs-vsctl&amp;nbsp;add-port&amp;nbsp;br0&amp;nbsp;ge-1/1/1&amp;nbsp;vlan_mode=access&amp;nbsp;tag=1&amp;nbsp;--&amp;nbsp;set&amp;nbsp;Interface&lt;br&gt;
+ge-1/1/1&amp;nbsp;type=pica8&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;ovs-vsctl&amp;nbsp;add-port&amp;nbsp;br0&amp;nbsp;te-1/1/49&amp;nbsp;vlan_mode=trunk&amp;nbsp;tag=1&amp;nbsp;--&amp;nbsp;set&amp;nbsp;Interface&lt;/div&gt;
+&lt;div&gt;te-1/1/49&amp;nbsp;type=pica8&amp;nbsp;options:is_dac=true&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;ovs-ofctl show br0 #显示所有端口信息&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;ryu-manager --ofp-tcp-listen-port 6633 ryu.app.simple_switch_13&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;leave minicom ctrl+a，x&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
+</description>
+				<pubDate>Fri, 23 Jun 2017 16:03:27 +0800</pubDate>
+				<link>http://fierralin.github.io/Technica/2017/06/ib-record</link>
+				<guid isPermaLink="true">http://fierralin.github.io/Technica/2017/06/ib-record</guid>
+			</item>
+		
+			<item>
+				<title>Markdown Reference</title>
+				<description>&lt;p&gt;1, &lt;strong&gt;标题设置（让字体变大，和word的标题意思一样）&lt;/strong&gt;&lt;br /&gt;
+在Markdown当中设置标题，有两种方式：&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;第一种：通过在文字下方添加“=”和“-”，他们分别表示一级标题和二级标题。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;第二种：在文字开头加上 “#”，通过“#”数量表示几级标题。（一共只有1~6级标题，1级标题字体最大）&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;2, &lt;strong&gt;块注释（blockquote）&lt;/strong&gt;&lt;br /&gt;
+通过在文字开头添加“&amp;gt;”表示块注释。（当&amp;gt;和文字之间添加五个blank时，块注释的文字会有变化。）&lt;/p&gt;
+
+&lt;p&gt;3, &lt;strong&gt;&lt;em&gt;斜体&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt;
+将需要设置为斜体的文字两端使用1个“*”或者“_”夹起来&lt;/p&gt;
+
+&lt;p&gt;4, &lt;strong&gt;粗体&lt;/strong&gt;&lt;br /&gt;
+将需要设置为斜体的文字两端使用2个“*”或者“_”夹起来&lt;/p&gt;
+
+&lt;p&gt;5, &lt;strong&gt;无序列表&lt;/strong&gt;&lt;br /&gt;
+在文字开头添加(&lt;em&gt;, +, and -)实现无序列表。但是要注意在(&lt;/em&gt;, +, and -)和文字之间需要添加空格。（建议：一个文档中只是用一种无序列表的表示方式）&lt;/p&gt;
+
+&lt;p&gt;6, &lt;strong&gt;有序列表&lt;/strong&gt;&lt;br /&gt;
+使用数字后面跟上句号。（还要有空格）&lt;/p&gt;
+
+&lt;p&gt;7, &lt;strong&gt;链接（Links）&lt;/strong&gt;&lt;br /&gt;
+Markdown中有两种方式，实现链接，分别为内联方式和引用方式。&lt;br /&gt;
+内联方式：This is an &lt;a href=&quot;http://example.com/&quot;&gt;example link&lt;/a&gt;.&lt;br /&gt;
+引用方式：&lt;br /&gt;
+I get 10 times more traffic from &lt;a href=&quot;http://google.com/&quot; title=&quot;Google&quot;&gt;Google&lt;/a&gt; than from &lt;a href=&quot;http://search.yahoo.com/&quot; title=&quot;Yahoo Search&quot;&gt;Yahoo&lt;/a&gt; or &lt;a href=&quot;http://search.msn.com/&quot; title=&quot;MSN Search&quot;&gt;MSN&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;8, &lt;strong&gt;图片（Images）&lt;/strong&gt;&lt;br /&gt;
+图片的处理方式和链接的处理方式，非常的类似。&lt;br /&gt;
+内联方式：&lt;img src=&quot;/path/to/img.jpg&quot; alt=&quot;alt text&quot; title=&quot;Title&quot; /&gt;&lt;br /&gt;
+引用方式：&lt;img src=&quot;/path/to/img.jpg&quot; alt=&quot;alt text&quot; title=&quot;Title&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;9, &lt;strong&gt;代码（HTML中所谓的Code）&lt;/strong&gt;&lt;br /&gt;
+实现方式有两种：&lt;br /&gt;
+第一种：简单文字出现一个代码框。使用&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt;。（&lt;code class=&quot;highlighter-rouge&quot;&gt;不是单引号而是左上角的ESC下面~中的&lt;/code&gt;）&lt;br /&gt;
+第二种：大片文字需要实现代码框。使用Tab和四个空格。&lt;/p&gt;
+
+&lt;p&gt;10, &lt;strong&gt;脚注（footnote）&lt;/strong&gt;&lt;br /&gt;
+实现方式如下：&lt;br /&gt;
+hello &lt;sup id=&quot;fnref:hello&quot;&gt;&lt;a href=&quot;#fn:hello&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;11, &lt;strong&gt;下划线&lt;/strong&gt;&lt;br /&gt;
+在空白行下方添加三条“-”横线。（前面讲过在文字下方添加“-”，实现的2级标题）&lt;/p&gt;
+
+&lt;p&gt;12, &lt;strong&gt;支持的html語言&lt;/strong&gt;&lt;br /&gt;
+kdb, b, i, em, sup, sub, br, code,&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown official&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://daringfireball.net/projects/markdown/basics&quot;&gt;Offical basics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:hello&quot;&gt;
+      &lt;p&gt;hi &lt;a href=&quot;#fnref:hello&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+				<pubDate>Fri, 07 Apr 2017 00:20:06 +0800</pubDate>
+				<link>http://fierralin.github.io/Technica/2017/04/Markdown-Reference</link>
+				<guid isPermaLink="true">http://fierralin.github.io/Technica/2017/04/Markdown-Reference</guid>
+			</item>
+		
+			<item>
+				<title>Install Packages for Windows or UNIX</title>
+				<description>&lt;h3 id=&quot;for-windows&quot;&gt;For Windows&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;GIMP,&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;for-opensuse&quot;&gt;For openSUSE&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;zypper install &lt;code class=&quot;highlighter-rouge&quot;&gt;nload&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;screenfetch&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;tree&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;git-core&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;gcc&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;make&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;for-debianubuntu&quot;&gt;For Debian/Ubuntu&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;apt-get install &lt;code class=&quot;highlighter-rouge&quot;&gt;nload&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+				<pubDate>Fri, 03 Mar 2017 11:59:39 +0800</pubDate>
+				<link>http://fierralin.github.io/Technica/2017/03/Install-Packages</link>
+				<guid isPermaLink="true">http://fierralin.github.io/Technica/2017/03/Install-Packages</guid>
+			</item>
+		
+			<item>
+				<title>opensuse顯示器分辨率設置</title>
+				<description>&lt;p&gt;一塊&lt;code class=&quot;highlighter-rouge&quot;&gt;1280x1024&lt;/code&gt;的方屏在kde下面居然只能顯示成&lt;code class=&quot;highlighter-rouge&quot;&gt;1024x768&lt;/code&gt;, 所以想要調整一下。&lt;/p&gt;
+
+&lt;p&gt;進去設置，選中顯示器一看，居然最高就只有&lt;code class=&quot;highlighter-rouge&quot;&gt;1024x768&lt;/code&gt;的選項。&lt;/p&gt;
+
+&lt;p&gt;Bing搜索&lt;code class=&quot;highlighter-rouge&quot;&gt;KDE monitor add undetected resolutions&lt;/code&gt;，結果搜到&lt;em&gt;fedora&lt;/em&gt;大法，進而從回覆中搜到了&lt;em&gt;Arch&lt;/em&gt;大法的終極方案。&lt;br /&gt;
+研究一番搞定。描述如下：&lt;/p&gt;
+
+&lt;p&gt;首先執行&lt;code class=&quot;highlighter-rouge&quot;&gt;xrandr&lt;/code&gt;命令（不用參數），輸出如下：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Screen 0: minimum 320 x 200, current 2720 x 1024, maximum 8192 x 8192
+HDMI-1 disconnected (normal left inverted right x axis y axis)
+HDMI-2 connected primary 1440x900+0+0 (normal left inverted right x axis y axis) 408mm x 255mm
+   1440x900      59.89 +  74.98* 
+   1280x1024     75.02    60.02  
+   1152x864      75.00  
+   1024x768      75.03    70.07    60.00  
+   832x624       74.55  
+   800x600       72.19    75.00    60.32    56.25  
+   640x480       75.00    72.81    66.67    59.94  
+   720x400       70.08  
+DP-1 connected 1280x1024+1440+0 (normal left inverted right x axis y axis) 0mm x 0mm`
+   1280x1024_60.00  59.89*+ （我已經完成設置了，本來沒有這一行，且*號在1024x768項後面）
+   1024x768      60.00
+   800x600       60.32    56.25  
+   848x480       60.00  
+   640x480       59.94  
+HDMI-3 disconnected (normal left inverted right x axis y axis)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;這裏列出了所有顯示器接口及所連顯示器的可選分辨率，其中DP-1, HDMI-2連有顯示器。我要改的是DP-1所連方屏的分辨率。&lt;/p&gt;
+
+&lt;p&gt;在已知DP-1顯示器分辨率能有&lt;code class=&quot;highlighter-rouge&quot;&gt;1280x1024&lt;/code&gt;的情況下，改分辨率就好辦多了。&lt;br /&gt;
+執行&lt;code class=&quot;highlighter-rouge&quot;&gt;cvt 1280 1024&lt;/code&gt;輸出&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;1280x1024 59.89 Hz (CVT 1.31M4) hsync: 63.67 kHz; pclk: 109.00 MHz                                                                       &lt;br /&gt;
+Modeline “1280x1024_60.00”  109.00  1280 1368 1496 1712  1024 1027 1034 1063 -hsync +vsync&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;這裏得到&lt;code class=&quot;highlighter-rouge&quot;&gt;1280x1024&lt;/code&gt;分辨率對應的參數，後續添加分辨率就用這個參數。再依次執行&lt;br /&gt;
+ &lt;code class=&quot;highlighter-rouge&quot;&gt;xrandr --newmode &quot;1280x1024_60.00&quot;  109.00  1280 1368 1496 1712  1024 1027 1034 1063 -hsync +vsync&lt;/code&gt;&lt;br /&gt;
+ &lt;code class=&quot;highlighter-rouge&quot;&gt;xrandr --addmode DP-1 1280x1024_60.00&lt;/code&gt;&lt;br /&gt;
+ &lt;code class=&quot;highlighter-rouge&quot;&gt;xrandr --output DP-1 --mode 1280x1024_60.00&lt;/code&gt;&lt;br /&gt;
+這樣，DP-1的分辨率就瞬間變成&lt;code class=&quot;highlighter-rouge&quot;&gt;1280x1024&lt;/code&gt;了。&lt;br /&gt;
+然而，進去KDE的設置裏面，仍然沒有該分辨率的選項。&lt;/p&gt;
+
+&lt;p&gt;要想做到可以在KDE系統裏面找到該設置項，做法如下&lt;br /&gt;
+進入&lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/X11/xorg.conf.d/&lt;/code&gt;目錄，可以看到&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;50-monitor.conf&lt;br /&gt;
+50-screen.conf&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;兩個文件。雖然Arch大法裏面說的配置文件是&lt;code class=&quot;highlighter-rouge&quot;&gt;10-monitor.conf&lt;/code&gt;，但是畢竟發行版不一樣，時代也在變遷，配置文件也會變的，直接在這裏改就行了。&lt;br /&gt;
+而且，這兩個文件裏面還貼心地給出了實例呢！&lt;br /&gt;
+言歸正傳，在&lt;code class=&quot;highlighter-rouge&quot;&gt;50-monitor.conf&lt;/code&gt;裏面添加如下內容：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Section &quot;Monitor&quot;
+  Identifier &quot;DP-1&quot;
+  Modeline &quot;1280x1024_60.00&quot;  109.00  1280 1368 1496 1712  1024 1027 1034 1063 -hsync +vsync
+  Option &quot;PreferredMode&quot; &quot;1280x1024_60.00&quot;
+EndSection
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;在&lt;code class=&quot;highlighter-rouge&quot;&gt;50-screen.conf&lt;/code&gt;添加：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Section &quot;Screen&quot;
+  Identifier &quot;ScreenDock&quot;
+  Monitor &quot;DP-1&quot;
+EndSection
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;重新登錄一下，就能在KDE的設置裏面看到DP-1所連接的顯示器有了&lt;code class=&quot;highlighter-rouge&quot;&gt;1280x1024&lt;/code&gt;分辨率了，選中即可。&lt;/p&gt;
+</description>
+				<pubDate>Mon, 19 Dec 2016 19:27:07 +0800</pubDate>
+				<link>http://fierralin.github.io/Technica/2016/12/opensuse-monitor</link>
+				<guid isPermaLink="true">http://fierralin.github.io/Technica/2016/12/opensuse-monitor</guid>
+			</item>
+		
+	</channel>
+</rss>

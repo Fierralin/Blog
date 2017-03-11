@@ -1,0 +1,421 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Fierralin Technica</title>
+  <meta name="theme-color" content="DimGrey" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/Technica/configs/jquery.min.js"></script>
+  <script src="/Technica/configs/bootstrap.min.js"></script>
+  <script src="/Technica/configs/header.js"></script>
+  <script src="/Technica/configs/toc.js"></script>
+  <link href="/Technica/configs/bootstrap.min.css" rel="stylesheet">
+  <link href="/Technica/configs/theme.css" rel="stylesheet">
+  <link href="/Technica/configs/syntax.css" rel="stylesheet">
+  <link rel="icon" href="http://fierralin.github.io/images/githublanc.jpg" type="image/jpg"/>
+</head>
+
+<body>
+
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89053635-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+  
+<!-- Your counter code should go here -->
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter41796744 = new Ya.Metrika({
+                    id:41796744,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/41796744" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+
+ <script type="text/javascript">
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+	  
+      <div class="navbar-header">
+        <a class="navbar-brand" href="https://fierralin.github.com"><img src="http://fierralin.github.com/images/githublanc.jpg" alt="Home" style="display:inline-block; margin-top:-2px" height="25px" width="25px"></a>
+		<a class="navbar-brand" href="/Technica/">Fierralin Technica</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/Technica/">Home</a></li>
+          <li><a href="/Technica/archive.html">Archive</a></li>
+          <li><a href="/Technica/tags.html">Tags</a></li>
+          <li><a href="/Technica/about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="wrapper">
+  <div class="content">
+    <div class="container container-center">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="article">
+            <div class="well">
+              <h1 class="well_headerlink"><a href="/Technica/2017/08/django-configuration.html">Django Configuration</a></h1>
+              <div class="post-meta">
+                <div class="post-time">
+                  <time>10 Aug 2017 00:44:06</time>
+                </div>
+                <ul>
+                  
+                    <li><a href="/Technica/tag/UNIX">UNIX</a></li>
+                  
+                    <li><a href="/Technica/tag/OS">OS</a></li>
+                  
+                </ul>
+              </div>
+              <div id="postcontent" class="post-content">
+                <div id="toc" class="toc"></div>
+                <h2 id="django-configuration">Django Configuration</h2>
+
+<p>参考<a href="http://www.cnblogs.com/Liqiongyu/p/5909706.html">从开发到部署，使用django创建一个简单可用的个人博客</a>。</p>
+
+<h4 id="create-project-and-init">Create Project and Init</h4>
+
+<ul>
+  <li><code class="highlighter-rouge">~# django-admin startproject sitename</code></li>
+  <li><code class="highlighter-rouge">~# cd sitename</code></li>
+  <li><code class="highlighter-rouge">~/sitename# python3 manage.py startapp appname</code></li>
+  <li><code class="highlighter-rouge">~/sitename# python3 manage.py migrate</code> 创建数据库。注意，1.9之前的版本是<code class="highlighter-rouge">python3 manage.py syncdb</code>，今改了</li>
+  <li><code class="highlighter-rouge">~/sitename# python3 manage.py createsuperuser</code> 创建超级用户，用来登录控制台</li>
+  <li><code class="highlighter-rouge">~/sitename# python3 manage.py runserver 0.0.0.0:9876</code> 运行服务，可以在外面访问，但是要开放相应防火墙端口</li>
+</ul>
+
+<h4 id="djangoueditor">DjangoUeditor</h4>
+
+<p><code class="highlighter-rouge">pip install DjangoUeditor</code> 这个存在问题，后来发现是因为DjangoUeditor基于python 2.7，不支持python3，改用DjangoUeditor3即可<br />
+以下是DjangoUeditor3做法：</p>
+<ul>
+  <li>下载 <a href="https://github.com/twz915/DjangoUeditor3">DjangoUeditor3</a>，并将其中的<code class="highlighter-rouge">DjangoUeditor</code>目录放到<code class="highlighter-rouge">~/sitename</code>下面</li>
+  <li><code class="highlighter-rouge">~/sitename/sitename/settings.py</code>:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="o">...</span>
+    <span class="s">'blog'</span><span class="p">,</span>
+    <span class="s">'DjangoUeditor'</span><span class="p">,</span>
+<span class="p">)</span></code></pre></figure>
+
+<ul>
+  <li><code class="highlighter-rouge">~/sitename/sitename/url.py</code>:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">DjangoUeditor</span> <span class="kn">import</span> <span class="n">urls</span> <span class="k">as</span> <span class="n">djud_urls</span>
+<span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r'^admin/'</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">)),</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r'^ueditor/'</span><span class="p">,</span><span class="n">include</span><span class="p">(</span><span class="n">djud_urls</span><span class="p">)),</span>
+<span class="p">]</span>
+
+<span class="k">if</span> <span class="n">settings</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">django.conf.urls.static</span> <span class="kn">import</span> <span class="n">static</span>
+    <span class="n">urlpatterns</span> <span class="o">+=</span> <span class="n">static</span><span class="p">(</span><span class="n">settings</span><span class="o">.</span><span class="n">MEDIA_URL</span><span class="p">,</span><span class="n">document_root</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">MEDIA_ROOT</span><span class="p">)</span></code></pre></figure>
+
+<ul>
+  <li><code class="highlighter-rouge">~/sitename/sitename/settings.py</code>:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">STATIC_URL</span> <span class="o">=</span> <span class="s">'/static/'</span>
+
+<span class="n">STATICFILES_DIRS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s">"common_static"</span><span class="p">),</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s">"static"</span><span class="p">),</span>
+<span class="p">)</span>
+
+<span class="n">UPLOAD_URL</span> <span class="o">=</span> <span class="s">'/upload/'</span>
+<span class="n">UPLOAD_ROOT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span><span class="s">'static'</span><span class="p">)</span>
+
+<span class="n">STATICFILES_FINDERS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s">"django.contrib.staticfiles.finders.FileSystemFinder"</span><span class="p">,</span>
+    <span class="s">"django.contrib.staticfiles.finders.AppDirectoriesFinder"</span><span class="p">,</span>
+<span class="p">)</span></code></pre></figure>
+
+<ul>
+  <li><code class="highlighter-rouge">~/sitename/blog/models.py</code>:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">DjangoUeditor.models</span> <span class="kn">import</span> <span class="n">UEditorField</span>
+<span class="k">class</span> <span class="nc">Article</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="o">...</span>
+    <span class="c">#content = models.TextField(blank=True, null=True)</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">UEditorField</span><span class="p">(</span><span class="s">u"Contents"</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">300</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">default</span> <span class="o">=</span> <span class="s">u''</span><span class="p">,</span> <span class="n">blank</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span> <span class="n">imagePath</span> <span class="o">=</span> <span class="s">"uploads/blog/images/"</span><span class="p">,</span>
+                           <span class="n">toolbars</span> <span class="o">=</span> <span class="s">'besttome'</span><span class="p">,</span> <span class="n">filePath</span> <span class="o">=</span> <span class="s">'uploads/blog/files/'</span><span class="p">)</span></code></pre></figure>
+
+<ul>
+  <li>最后更新数据库：<code class="highlighter-rouge">python3 manage.py migrate</code>, <code class="highlighter-rouge">python3 manage.py runserver</code></li>
+</ul>
+
+<h4 id="django--view--url-">Django 添加 view 和 url 的逻辑</h4>
+<ul>
+  <li><code class="highlighter-rouge">~/sitename/blog/views.py</code> 添加：</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">Test</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s">"just a test"</span><span class="p">)</span></code></pre></figure>
+
+<ul>
+  <li><code class="highlighter-rouge">~/sitename/blog/urls.py</code> 添加：</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django.conf.urls</span> <span class="kn">import</span> <span class="n">url</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">views</span>
+
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r'^test/'</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">Test</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s">"blog_test"</span><span class="p">),</span>
+<span class="p">]</span></code></pre></figure>
+
+<ul>
+  <li><code class="highlighter-rouge">~/sitename/sitename/urls.py</code> 里的 <code class="highlighter-rouge">urlpatterns</code> 添加一行：</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="o">...</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r'^blog/'</span><span class="p">,</span><span class="n">include</span><span class="p">(</span><span class="n">blog_url</span><span class="p">)),</span>
+<span class="p">]</span></code></pre></figure>
+
+<h4 id="section">使用模板</h4>
+<ul>
+  <li>首先在 <code class="highlighter-rouge">~/sitename/sitename/settings.py</code> 里面修改 <code class="highlighter-rouge">'DIRS': [],</code> 为 <code class="highlighter-rouge">'DIRS': [BASE_DIR+"/templates",],</code></li>
+  <li><code class="highlighter-rouge">mkdir ~/sitename/sitename/templates</code></li>
+  <li>添加 <code class="highlighter-rouge">testtemplate.html</code> 到该目录，文件里面写上 ``</li>
+  <li><code class="highlighter-rouge">~/sitename/blog/views.py</code> 添加</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="k">def</span> <span class="nf">TestTemplate</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s">'blog/testtemplate.html'</span><span class="p">,</span> <span class="p">{</span><span class="s">'current_time'</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()})</span></code></pre></figure>
+
+<ul>
+  <li><code class="highlighter-rouge">~/sitename/blog/urls.py</code> 的 <code class="highlighter-rouge">urlpatterns</code> 添加一行引入<code class="highlighter-rouge">blog</code>的<code class="highlighter-rouge">urls</code>：</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r'^test/'</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">Test</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s">"only_test"</span><span class="p">),</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r'^testview/'</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">TestView</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s">"view_test"</span><span class="p">),</span>
+<span class="o">+</span>    <span class="n">url</span><span class="p">(</span><span class="s">r'^testtemplate/'</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">TestTemplate</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s">"template_test"</span><span class="p">),</span>
+<span class="p">]</span></code></pre></figure>
+
+<h4 id="markdown-support">Markdown support</h4>
+
+<ul>
+  <li><code class="highlighter-rouge">MarkupField</code></li>
+  <li><code class="highlighter-rouge"># zypper install python-pygments</code></li>
+  <li><code class="highlighter-rouge">pygmentize -S default -f html -a .codehilite &gt; code.css</code></li>
+</ul>
+
+                
+
+<div class="share-bar">
+  <ul class="share-buttons">
+    
+    <li class="share-facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://fierralin.github.io/Technica/2017/08/django-configuration" target="_blank" title="Share on Facebook">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-square-o fa-stack-2x"></i>
+          <i class="fa fa-facebook fa-stack-1x"></i>
+        </span>
+      </a>
+    </li>
+    
+
+    
+    <li class="share-twitter">
+      <a href="https://twitter.com/intent/tweet?url=/Technica/2017/08/django-configuration&text=Django Configuration" target="_blank" title="Tweet">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-square-o fa-stack-2x"></i>
+          <i class="fa fa-twitter fa-stack-1x"></i>
+        </span>
+      </a>
+    </li>
+    
+
+    
+    <li class="share-google-plus">
+      <a href="https://plus.google.com/share?url=/Technica/2017/08/django-configuration" target="_blank" title="Share on Google Plus">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-square-o fa-stack-2x"></i>
+          <i class="fa fa-google-plus fa-stack-1x"></i>
+        </span>
+      </a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="share-envelope">
+      <a href="mailto:?&subject=Django Configuration&body=What the fuck... /Technica/2017/08/django-configuration" target="_blank" title="Email">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-square-o fa-stack-2x"></i>
+          <i class="fa fa-envelope-o fa-stack-1x"></i>
+        </span>
+      </a>
+    </li>
+    
+
+  </ul>
+</div>
+
+
+              </div>
+			  <nav class="article-previous fn-clear">
+				
+				  <a class="prev" href="/Technica/2017/08/gdb.html"
+				  rel="bookmark" title="gdb">
+				    &laquo;&nbsp;gdb
+				  </a>
+				
+				
+				  <a class="next" href="/Technica/2017/09/DRL-Survey.html"
+				  rel="bookmark" title="DRL Survey" style="float:right">
+				    DRL Survey&nbsp;&raquo;
+				  </a>
+				
+			  </nav>
+			  
+<script>
+var idcomments_acct = 'd9d33d61a9b351aae067d1304309d685';
+var idcomments_post_id = '/2017/08/django-configuration';
+var idcomments_post_url;
+</script>
+<span id="IDCommentsPostTitle" style="display:none"></span>
+<script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+
+			  
+
+			  
+
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 hidden-xs">
+          <div class="sidebar">
+  <h2>Recent Articles</h2>
+  <ul>
+    
+    <li><a href="/Technica/2017/09/Pong-from-Pixels.html">Pong from Pixels</a></li>
+    
+    <li><a href="/Technica/2017/09/DRL-with-a-natural-language-action-space.html">Deep Reinforcement Learning with a Natural Language Action Space</a></li>
+    
+    <li><a href="/Technica/2017/09/DRL-Survey.html">DRL Survey</a></li>
+    
+    <li><a href="/Technica/2017/08/django-configuration.html">Django Configuration</a></li>
+    
+    <li><a href="/Technica/2017/08/gdb.html">gdb</a></li>
+    
+    <li><a href="/Technica/2017/07/Paxos-Learning.html">Paxos</a></li>
+    
+    <li><a href="/Technica/2017/06/ib-record.html">ib record</a></li>
+    
+    <li><a href="/Technica/2017/04/Markdown-Reference.html">Markdown Reference</a></li>
+    
+    <li><a href="/Technica/2017/03/Install-Packages.html">Install Packages for Windows or UNIX</a></li>
+    
+  </ul>
+</div>
+
+<div class="sidebar">
+  <h2>Tags</h2>
+  <ul>
+    
+      <!--li><a href="/Technica/tags.html#social">social</a></li-->
+      <li><a href="/Technica/tag/social" data-toggle="tooltip" data-placement="right" title='1'>social</a></li>
+    
+      <!--li><a href="/Technica/tags.html#jekyll">jekyll</a></li-->
+      <li><a href="/Technica/tag/jekyll" data-toggle="tooltip" data-placement="right" title='6'>jekyll</a></li>
+    
+      <!--li><a href="/Technica/tags.html#analytics">analytics</a></li-->
+      <li><a href="/Technica/tag/analytics" data-toggle="tooltip" data-placement="right" title='1'>analytics</a></li>
+    
+      <!--li><a href="/Technica/tags.html#tags">tags</a></li-->
+      <li><a href="/Technica/tag/tags" data-toggle="tooltip" data-placement="right" title='1'>tags</a></li>
+    
+      <!--li><a href="/Technica/tags.html#comments">comments</a></li-->
+      <li><a href="/Technica/tag/comments" data-toggle="tooltip" data-placement="right" title='1'>comments</a></li>
+    
+      <!--li><a href="/Technica/tags.html#code">code</a></li-->
+      <li><a href="/Technica/tag/code" data-toggle="tooltip" data-placement="right" title='1'>code</a></li>
+    
+      <!--li><a href="/Technica/tags.html#images">images</a></li-->
+      <li><a href="/Technica/tag/images" data-toggle="tooltip" data-placement="right" title='1'>images</a></li>
+    
+      <!--li><a href="/Technica/tags.html#Literature">Literature</a></li-->
+      <li><a href="/Technica/tag/Literature" data-toggle="tooltip" data-placement="right" title='1'>Literature</a></li>
+    
+      <!--li><a href="/Technica/tags.html#UNIX">UNIX</a></li-->
+      <li><a href="/Technica/tag/UNIX" data-toggle="tooltip" data-placement="right" title='10'>UNIX</a></li>
+    
+      <!--li><a href="/Technica/tags.html#OS">OS</a></li-->
+      <li><a href="/Technica/tag/OS" data-toggle="tooltip" data-placement="right" title='10'>OS</a></li>
+    
+      <!--li><a href="/Technica/tags.html#DRL">DRL</a></li-->
+      <li><a href="/Technica/tag/DRL" data-toggle="tooltip" data-placement="right" title='3'>DRL</a></li>
+    
+  </ul>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+      <footer class="footer-distributed">
+		Copyright @Fierralin
+    </footer>
+  </body>
+</html>
+
+</div>

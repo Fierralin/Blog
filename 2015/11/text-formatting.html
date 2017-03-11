@@ -1,0 +1,299 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Fierralin Technica</title>
+  <meta name="theme-color" content="DimGrey" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/Technica/configs/jquery.min.js"></script>
+  <script src="/Technica/configs/bootstrap.min.js"></script>
+  <script src="/Technica/configs/header.js"></script>
+  <script src="/Technica/configs/toc.js"></script>
+  <link href="/Technica/configs/bootstrap.min.css" rel="stylesheet">
+  <link href="/Technica/configs/theme.css" rel="stylesheet">
+  <link href="/Technica/configs/syntax.css" rel="stylesheet">
+  <link rel="icon" href="http://fierralin.github.io/images/githublanc.jpg" type="image/jpg"/>
+</head>
+
+<body>
+
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89053635-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+  
+<!-- Your counter code should go here -->
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter41796744 = new Ya.Metrika({
+                    id:41796744,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/41796744" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+
+ <script type="text/javascript">
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+	  
+      <div class="navbar-header">
+        <a class="navbar-brand" href="https://fierralin.github.com"><img src="http://fierralin.github.com/images/githublanc.jpg" alt="Home" style="display:inline-block; margin-top:-2px" height="25px" width="25px"></a>
+		<a class="navbar-brand" href="/Technica/">Fierralin Technica</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/Technica/">Home</a></li>
+          <li><a href="/Technica/archive.html">Archive</a></li>
+          <li><a href="/Technica/tags.html">Tags</a></li>
+          <li><a href="/Technica/about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="wrapper">
+  <div class="content">
+    <div class="container container-center">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="article">
+            <div class="well">
+              <h1 class="well_headerlink"><a href="/Technica/2015/11/text-formatting.html">Text formatting</a></h1>
+              <div class="post-meta">
+                <div class="post-time">
+                  <time>03 Nov 2015 00:25:06</time>
+                </div>
+                <ul>
+                  
+                    <li><a href="/Technica/tag/jekyll">jekyll</a></li>
+                  
+                </ul>
+              </div>
+              <div id="postcontent" class="post-content">
+                <div id="toc" class="toc"></div>
+                <h1 id="accent-colors">Accent colors</h1>
+
+<p>Accent color is color for some important elements, such as links, buttons, icons. Currently accent color is <span class="label" style="background-color:#3CA2A2; color:#444444">#3CA2A2</span>. This theme has some more predefined colors available in <strong>theme.scss</strong>, under variable <code class="highlighter-rouge">$accent-color</code> in the beginning of the file, such as <span class="label" style="background-color:#C38FD6; color:#444444">#C38FD6</span>, <span class="label" style="background-color:#8FD6B3; color:#444444">#8FD6B3</span>, <span class="label" style="background-color:#35B4DE; color:#444444">#35B4DE</span>, <span class="label" style="background-color:#D2E354; color:#444444">#D2E354</span>, <span class="label" style="background-color:#52B54B; color:#444444">#52B54B</span>. You can use one of them (just hover over the label to see accent color in action) or define your own!</p>
+
+<script>
+  $('.label').hover(function(){
+    var color = $(this).text();
+    [].forEach.call($('a'), function(item) {
+      item.style.color = color
+    })
+  })
+</script>
+
+<style>
+  .label{
+    cursor: default;
+  }
+</style>
+
+<h1 id="text-formating-example">Text formating example</h1>
+
+<p>Some examples of text formating for some common text elements.</p>
+
+<h1 id="headers">Headers</h1>
+
+<h1 id="header1">Header1</h1>
+
+<h2 id="header2">Header2</h2>
+
+<h3 id="header3">Header3</h3>
+
+<h4 id="header4">Header4</h4>
+
+<h1 id="emphasis">Emphasis</h1>
+
+<p>Italics: <code class="highlighter-rouge">*asterisks*</code> -&gt; <em>asterisks</em> or <code class="highlighter-rouge">_underscores_</code> -&gt; <em>underscores</em>.</p>
+
+<p>Bold: <code class="highlighter-rouge">**asterisks**</code> -&gt; <strong>asterisks</strong> or <code class="highlighter-rouge">__underscores__</code> -&gt; <strong>underscores</strong>.</p>
+
+<p>You also can combine them: <code class="highlighter-rouge">**asterisks and _underscores_**</code> -&gt; <strong>asterisks and <em>underscores</em></strong>.</p>
+
+<h1 id="blockquotes-and-notes">Blockquotes and notes</h1>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">&gt;Blockquotes</code></pre></figure>
+
+<blockquote>
+  <p>Blockquotes</p>
+</blockquote>
+
+<p>Using very cool <a href="http://kramdown.gettalong.org/quickref.html#block-attributes">feature</a> of kramdown which allows to assign any attribute to a block-level element I’ve added note and warning:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">&gt;Note 
+<span class="o">{</span>: .note<span class="o">}</span></code></pre></figure>
+
+<blockquote class="note">
+  <p>Note</p>
+</blockquote>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">&gt;Warning 
+<span class="o">{</span>: .note .warning<span class="o">}</span></code></pre></figure>
+
+<blockquote class="note warning">
+  <p>Warning</p>
+</blockquote>
+
+<h1 id="keyboard-buttons">Keyboard buttons</h1>
+
+<p>In case you need to show some keyboard shortcuts, like <code class="key highlighter-rouge">Ctrl</code>+<code class="key highlighter-rouge">A</code> use following construction:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="sb">`</span>Ctrl<span class="sb">`</span><span class="o">{</span>: .key<span class="o">}</span>+<span class="sb">`</span>A<span class="sb">`</span><span class="o">{</span>:.key<span class="o">}</span></code></pre></figure>
+
+<p>Example of keyboard shortcut in terminal:</p>
+
+<p><code class="key highlighter-rouge">Ctrl</code> + <code class="key highlighter-rouge">A</code> = Move cursor to beginning of line<br />
+<code class="key highlighter-rouge">Ctrl</code> + <code class="key highlighter-rouge">E</code> = Move cursor to end of line<br />
+<code class="key highlighter-rouge">Ctrl</code> + <code class="key highlighter-rouge">C</code> = kills the current process.<br />
+<code class="key highlighter-rouge">Ctrl</code> + <code class="key highlighter-rouge">Z</code> = sends the current process to the background.<br />
+<code class="key highlighter-rouge">Ctrl</code> + <code class="key highlighter-rouge">D</code> = logs you out.<br />
+<code class="key highlighter-rouge">Ctrl</code> + <code class="key highlighter-rouge">R</code> = finds the last command matching the entered letters.</p>
+
+                
+
+              </div>
+			  <nav class="article-previous fn-clear">
+				
+				  <a class="prev" href="/Technica/2015/11/installation.html"
+				  rel="bookmark" title="Installation">
+				    &laquo;&nbsp;Installation
+				  </a>
+				
+				
+				  <a class="next" href="/Technica/2015/12/jekyll-clean-theme.html"
+				  rel="bookmark" title="Jekyll Dark Clean Theme" style="float:right">
+				    Jekyll Dark Clean Theme&nbsp;&raquo;
+				  </a>
+				
+			  </nav>
+			  
+			  
+
+			  
+
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 hidden-xs">
+          <div class="sidebar">
+  <h2>Recent Articles</h2>
+  <ul>
+    
+    <li><a href="/Technica/2017/09/Pong-from-Pixels.html">Pong from Pixels</a></li>
+    
+    <li><a href="/Technica/2017/09/DRL-with-a-natural-language-action-space.html">Deep Reinforcement Learning with a Natural Language Action Space</a></li>
+    
+    <li><a href="/Technica/2017/09/DRL-Survey.html">DRL Survey</a></li>
+    
+    <li><a href="/Technica/2017/08/django-configuration.html">Django Configuration</a></li>
+    
+    <li><a href="/Technica/2017/08/gdb.html">gdb</a></li>
+    
+    <li><a href="/Technica/2017/07/Paxos-Learning.html">Paxos</a></li>
+    
+    <li><a href="/Technica/2017/06/ib-record.html">ib record</a></li>
+    
+    <li><a href="/Technica/2017/04/Markdown-Reference.html">Markdown Reference</a></li>
+    
+    <li><a href="/Technica/2017/03/Install-Packages.html">Install Packages for Windows or UNIX</a></li>
+    
+  </ul>
+</div>
+
+<div class="sidebar">
+  <h2>Tags</h2>
+  <ul>
+    
+      <!--li><a href="/Technica/tags.html#social">social</a></li-->
+      <li><a href="/Technica/tag/social" data-toggle="tooltip" data-placement="right" title='1'>social</a></li>
+    
+      <!--li><a href="/Technica/tags.html#jekyll">jekyll</a></li-->
+      <li><a href="/Technica/tag/jekyll" data-toggle="tooltip" data-placement="right" title='6'>jekyll</a></li>
+    
+      <!--li><a href="/Technica/tags.html#analytics">analytics</a></li-->
+      <li><a href="/Technica/tag/analytics" data-toggle="tooltip" data-placement="right" title='1'>analytics</a></li>
+    
+      <!--li><a href="/Technica/tags.html#tags">tags</a></li-->
+      <li><a href="/Technica/tag/tags" data-toggle="tooltip" data-placement="right" title='1'>tags</a></li>
+    
+      <!--li><a href="/Technica/tags.html#comments">comments</a></li-->
+      <li><a href="/Technica/tag/comments" data-toggle="tooltip" data-placement="right" title='1'>comments</a></li>
+    
+      <!--li><a href="/Technica/tags.html#code">code</a></li-->
+      <li><a href="/Technica/tag/code" data-toggle="tooltip" data-placement="right" title='1'>code</a></li>
+    
+      <!--li><a href="/Technica/tags.html#images">images</a></li-->
+      <li><a href="/Technica/tag/images" data-toggle="tooltip" data-placement="right" title='1'>images</a></li>
+    
+      <!--li><a href="/Technica/tags.html#Literature">Literature</a></li-->
+      <li><a href="/Technica/tag/Literature" data-toggle="tooltip" data-placement="right" title='1'>Literature</a></li>
+    
+      <!--li><a href="/Technica/tags.html#UNIX">UNIX</a></li-->
+      <li><a href="/Technica/tag/UNIX" data-toggle="tooltip" data-placement="right" title='10'>UNIX</a></li>
+    
+      <!--li><a href="/Technica/tags.html#OS">OS</a></li-->
+      <li><a href="/Technica/tag/OS" data-toggle="tooltip" data-placement="right" title='10'>OS</a></li>
+    
+      <!--li><a href="/Technica/tags.html#DRL">DRL</a></li-->
+      <li><a href="/Technica/tag/DRL" data-toggle="tooltip" data-placement="right" title='3'>DRL</a></li>
+    
+  </ul>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+      <footer class="footer-distributed">
+		Copyright @Fierralin
+    </footer>
+  </body>
+</html>
+
+</div>

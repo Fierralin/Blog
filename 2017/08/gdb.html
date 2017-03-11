@@ -1,0 +1,402 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Fierralin Technica</title>
+  <meta name="theme-color" content="DimGrey" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/Technica/configs/jquery.min.js"></script>
+  <script src="/Technica/configs/bootstrap.min.js"></script>
+  <script src="/Technica/configs/header.js"></script>
+  <script src="/Technica/configs/toc.js"></script>
+  <link href="/Technica/configs/bootstrap.min.css" rel="stylesheet">
+  <link href="/Technica/configs/theme.css" rel="stylesheet">
+  <link href="/Technica/configs/syntax.css" rel="stylesheet">
+  <link rel="icon" href="http://fierralin.github.io/images/githublanc.jpg" type="image/jpg"/>
+</head>
+
+<body>
+
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89053635-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+  
+<!-- Your counter code should go here -->
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter41796744 = new Ya.Metrika({
+                    id:41796744,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/41796744" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+
+ <script type="text/javascript">
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+	  
+      <div class="navbar-header">
+        <a class="navbar-brand" href="https://fierralin.github.com"><img src="http://fierralin.github.com/images/githublanc.jpg" alt="Home" style="display:inline-block; margin-top:-2px" height="25px" width="25px"></a>
+		<a class="navbar-brand" href="/Technica/">Fierralin Technica</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/Technica/">Home</a></li>
+          <li><a href="/Technica/archive.html">Archive</a></li>
+          <li><a href="/Technica/tags.html">Tags</a></li>
+          <li><a href="/Technica/about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="wrapper">
+  <div class="content">
+    <div class="container container-center">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="article">
+            <div class="well">
+              <h1 class="well_headerlink"><a href="/Technica/2017/08/gdb.html">gdb</a></h1>
+              <div class="post-meta">
+                <div class="post-time">
+                  <time>09 Aug 2017 00:25:06</time>
+                </div>
+                <ul>
+                  
+                    <li><a href="/Technica/tag/UNIX">UNIX</a></li>
+                  
+                    <li><a href="/Technica/tag/OS">OS</a></li>
+                  
+                </ul>
+              </div>
+              <div id="postcontent" class="post-content">
+                <div id="toc" class="toc"></div>
+                <h2 id="gdb-">GDB 命令總覽</h2>
+
+<p><strong><em><code class="highlighter-rouge">baidie</code></em></strong></p>
+
+<h4 id="gdb--1">GDB 命令</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Command</th>
+      <th style="text-align: left">Descriptions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">help</code>, <code class="highlighter-rouge">h</code></td>
+      <td style="text-align: left">x</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">apropros</code></td>
+      <td style="text-align: left">x</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">complete</code></td>
+      <td style="text-align: left">x</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">info</code>, <code class="highlighter-rouge">i</code></td>
+      <td style="text-align: left">查看信息<br /><code class="highlighter-rouge">i threads</code>/<code class="highlighter-rouge">i th</code>: 查看綫程信息<br /><code class="highlighter-rouge">i break</code>/<code class="highlighter-rouge">i b</code>: 查看斷點信息<br /><code class="highlighter-rouge">i args</code>: 列出參數</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">set</code></td>
+      <td style="text-align: left">x</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">show</code></td>
+      <td style="text-align: left">x</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><code class="highlighter-rouge">bsd &lt;em&gt;dfsdf&lt;/em&gt; </code><br />
+<code>dfsd <em>dfsfs</em></code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Command</th>
+      <th style="text-align: left">Descriptions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">backtrace</code>, <code class="highlighter-rouge">bt</code></td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">frame</code>, <code class="highlighter-rouge">f</code></td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">list</code>, <code class="highlighter-rouge">l</code></td>
+      <td style="text-align: left">列出源代碼<br /><code class="highlighter-rouge">l 10</code>: 列出從10行開始的源代碼<br /><code>l <em>func_name</em></code>: 列出某個函數的源代碼<br /><code class="highlighter-rouge">l 10 20</code>: 列出10行到20行之間的代碼</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">print</code>, <code class="highlighter-rouge">p</code></td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">quit</code>, <code class="highlighter-rouge">q</code></td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="gdb--2">GDB 下運行程序</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">x</th>
+      <th style="text-align: left">x</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">break</code>, <code class="highlighter-rouge">b</code></td>
+      <td style="text-align: left">創建斷點<br /><code class="highlighter-rouge">b file_name.c:300</code>: 設置文件具體行爲斷點<br /><code class="highlighter-rouge">b function_name</code>: 設置某函數爲斷點</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="section">調試代碼</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">x</th>
+      <th style="text-align: left">x</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">run</code>, <code class="highlighter-rouge">r</code></td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">next</code>, <code class="highlighter-rouge">n</code></td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">step</code>, <code class="highlighter-rouge">s</code></td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="gdb--3">GDB 多綫程調試</h2>
+
+                
+
+<div class="share-bar">
+  <ul class="share-buttons">
+    
+    <li class="share-facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://fierralin.github.io/Technica/2017/08/gdb" target="_blank" title="Share on Facebook">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-square-o fa-stack-2x"></i>
+          <i class="fa fa-facebook fa-stack-1x"></i>
+        </span>
+      </a>
+    </li>
+    
+
+    
+    <li class="share-twitter">
+      <a href="https://twitter.com/intent/tweet?url=/Technica/2017/08/gdb&text=gdb" target="_blank" title="Tweet">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-square-o fa-stack-2x"></i>
+          <i class="fa fa-twitter fa-stack-1x"></i>
+        </span>
+      </a>
+    </li>
+    
+
+    
+    <li class="share-google-plus">
+      <a href="https://plus.google.com/share?url=/Technica/2017/08/gdb" target="_blank" title="Share on Google Plus">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-square-o fa-stack-2x"></i>
+          <i class="fa fa-google-plus fa-stack-1x"></i>
+        </span>
+      </a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="share-envelope">
+      <a href="mailto:?&subject=gdb&body=GDB /Technica/2017/08/gdb" target="_blank" title="Email">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-square-o fa-stack-2x"></i>
+          <i class="fa fa-envelope-o fa-stack-1x"></i>
+        </span>
+      </a>
+    </li>
+    
+
+  </ul>
+</div>
+
+
+              </div>
+			  <nav class="article-previous fn-clear">
+				
+				  <a class="prev" href="/Technica/2017/07/Paxos-Learning.html"
+				  rel="bookmark" title="Paxos">
+				    &laquo;&nbsp;Paxos
+				  </a>
+				
+				
+				  <a class="next" href="/Technica/2017/08/django-configuration.html"
+				  rel="bookmark" title="Django Configuration" style="float:right">
+				    Django Configuration&nbsp;&raquo;
+				  </a>
+				
+			  </nav>
+			  
+<script>
+var idcomments_acct = 'd9d33d61a9b351aae067d1304309d685';
+var idcomments_post_id = '/2017/08/gdb';
+var idcomments_post_url;
+</script>
+<span id="IDCommentsPostTitle" style="display:none"></span>
+<script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+
+			  
+
+			  
+
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 hidden-xs">
+          <div class="sidebar">
+  <h2>Recent Articles</h2>
+  <ul>
+    
+    <li><a href="/Technica/2017/09/Pong-from-Pixels.html">Pong from Pixels</a></li>
+    
+    <li><a href="/Technica/2017/09/DRL-with-a-natural-language-action-space.html">Deep Reinforcement Learning with a Natural Language Action Space</a></li>
+    
+    <li><a href="/Technica/2017/09/DRL-Survey.html">DRL Survey</a></li>
+    
+    <li><a href="/Technica/2017/08/django-configuration.html">Django Configuration</a></li>
+    
+    <li><a href="/Technica/2017/08/gdb.html">gdb</a></li>
+    
+    <li><a href="/Technica/2017/07/Paxos-Learning.html">Paxos</a></li>
+    
+    <li><a href="/Technica/2017/06/ib-record.html">ib record</a></li>
+    
+    <li><a href="/Technica/2017/04/Markdown-Reference.html">Markdown Reference</a></li>
+    
+    <li><a href="/Technica/2017/03/Install-Packages.html">Install Packages for Windows or UNIX</a></li>
+    
+  </ul>
+</div>
+
+<div class="sidebar">
+  <h2>Tags</h2>
+  <ul>
+    
+      <!--li><a href="/Technica/tags.html#social">social</a></li-->
+      <li><a href="/Technica/tag/social" data-toggle="tooltip" data-placement="right" title='1'>social</a></li>
+    
+      <!--li><a href="/Technica/tags.html#jekyll">jekyll</a></li-->
+      <li><a href="/Technica/tag/jekyll" data-toggle="tooltip" data-placement="right" title='6'>jekyll</a></li>
+    
+      <!--li><a href="/Technica/tags.html#analytics">analytics</a></li-->
+      <li><a href="/Technica/tag/analytics" data-toggle="tooltip" data-placement="right" title='1'>analytics</a></li>
+    
+      <!--li><a href="/Technica/tags.html#tags">tags</a></li-->
+      <li><a href="/Technica/tag/tags" data-toggle="tooltip" data-placement="right" title='1'>tags</a></li>
+    
+      <!--li><a href="/Technica/tags.html#comments">comments</a></li-->
+      <li><a href="/Technica/tag/comments" data-toggle="tooltip" data-placement="right" title='1'>comments</a></li>
+    
+      <!--li><a href="/Technica/tags.html#code">code</a></li-->
+      <li><a href="/Technica/tag/code" data-toggle="tooltip" data-placement="right" title='1'>code</a></li>
+    
+      <!--li><a href="/Technica/tags.html#images">images</a></li-->
+      <li><a href="/Technica/tag/images" data-toggle="tooltip" data-placement="right" title='1'>images</a></li>
+    
+      <!--li><a href="/Technica/tags.html#Literature">Literature</a></li-->
+      <li><a href="/Technica/tag/Literature" data-toggle="tooltip" data-placement="right" title='1'>Literature</a></li>
+    
+      <!--li><a href="/Technica/tags.html#UNIX">UNIX</a></li-->
+      <li><a href="/Technica/tag/UNIX" data-toggle="tooltip" data-placement="right" title='10'>UNIX</a></li>
+    
+      <!--li><a href="/Technica/tags.html#OS">OS</a></li-->
+      <li><a href="/Technica/tag/OS" data-toggle="tooltip" data-placement="right" title='10'>OS</a></li>
+    
+      <!--li><a href="/Technica/tags.html#DRL">DRL</a></li-->
+      <li><a href="/Technica/tag/DRL" data-toggle="tooltip" data-placement="right" title='3'>DRL</a></li>
+    
+  </ul>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+      <footer class="footer-distributed">
+		Copyright @Fierralin
+    </footer>
+  </body>
+</html>
+
+</div>

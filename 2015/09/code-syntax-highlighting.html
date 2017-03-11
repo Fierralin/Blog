@@ -1,0 +1,293 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Fierralin Technica</title>
+  <meta name="theme-color" content="DimGrey" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/Technica/configs/jquery.min.js"></script>
+  <script src="/Technica/configs/bootstrap.min.js"></script>
+  <script src="/Technica/configs/header.js"></script>
+  <script src="/Technica/configs/toc.js"></script>
+  <link href="/Technica/configs/bootstrap.min.css" rel="stylesheet">
+  <link href="/Technica/configs/theme.css" rel="stylesheet">
+  <link href="/Technica/configs/syntax.css" rel="stylesheet">
+  <link rel="icon" href="http://fierralin.github.io/images/githublanc.jpg" type="image/jpg"/>
+</head>
+
+<body>
+
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89053635-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+  
+<!-- Your counter code should go here -->
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter41796744 = new Ya.Metrika({
+                    id:41796744,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/41796744" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+
+ <script type="text/javascript">
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+	  
+      <div class="navbar-header">
+        <a class="navbar-brand" href="https://fierralin.github.com"><img src="http://fierralin.github.com/images/githublanc.jpg" alt="Home" style="display:inline-block; margin-top:-2px" height="25px" width="25px"></a>
+		<a class="navbar-brand" href="/Technica/">Fierralin Technica</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/Technica/">Home</a></li>
+          <li><a href="/Technica/archive.html">Archive</a></li>
+          <li><a href="/Technica/tags.html">Tags</a></li>
+          <li><a href="/Technica/about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="wrapper">
+  <div class="content">
+    <div class="container container-center">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="article">
+            <div class="well">
+              <h1 class="well_headerlink"><a href="/Technica/2015/09/code-syntax-highlighting.html">Sample post with code snippets</a></h1>
+              <div class="post-meta">
+                <div class="post-time">
+                  <time>02 Sep 2015 00:25:06</time>
+                </div>
+                <ul>
+                  
+                    <li><a href="/Technica/tag/code">code</a></li>
+                  
+                    <li><a href="/Technica/tag/jekyll">jekyll</a></li>
+                  
+                </ul>
+              </div>
+              <div id="postcontent" class="post-content">
+                <div id="toc" class="toc"></div>
+                <h2 id="introduction">Introduction</h2>
+
+<p>For code syntax coloration I’m using Darcula theme from Intellij IDEA, which I’ve found in this post <a href="http://smasue.github.io/pygments-darcula/">Darcula theme for Pygments</a>.</p>
+
+<p>XML with line numbers (linenos flag), <code class="highlighter-rouge"><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">highlight</span><span class="w"> </span><span class="err">xml</span><span class="w"> </span><span class="err">linenos</span><span class="w"> </span><span class="err">%</span><span class="p">}</span></code>:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></td><td class="code"><pre><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;rss</span> <span class="na">version=</span><span class="s">"2.0"</span> <span class="na">xmlns:atom=</span><span class="s">"http://www.w3.org/2005/Atom"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;channel&gt;</span>
+    <span class="nt">&lt;title&gt;</span>{{ site.name }}<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;description&gt;</span>{{ site.description }}<span class="nt">&lt;/description&gt;</span>
+    <span class="nt">&lt;link&gt;</span>{{site.baseurl | prepend:site.url}}<span class="nt">&lt;/link&gt;</span>
+    <span class="nt">&lt;atom:link</span> <span class="na">href=</span><span class="s">"{{site.baseurl | prepend:site.url}}/feed.xml"</span> <span class="na">rel=</span><span class="s">"self"</span> <span class="na">type=</span><span class="s">"application/rss+xml"</span> <span class="nt">/&gt;</span>
+    {% for post in site.posts limit:10 %}
+      <span class="nt">&lt;item&gt;</span>
+        <span class="nt">&lt;title&gt;</span>{{ post.title }}<span class="nt">&lt;/title&gt;</span>
+        <span class="nt">&lt;description&gt;</span>{{ post.content | xml_escape }}<span class="nt">&lt;/description&gt;</span>
+        <span class="nt">&lt;pubDate&gt;</span>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}<span class="nt">&lt;/pubDate&gt;</span>
+        <span class="nt">&lt;link&gt;</span>{{post.url | prepend:site.baseurl | prepend:site.url}}<span class="nt">&lt;/link&gt;</span>
+        <span class="nt">&lt;guid</span> <span class="na">isPermaLink=</span><span class="s">"true"</span><span class="nt">&gt;</span>{{post.url | prepend:site.baseurl | prepend:site.url}}<span class="nt">&lt;/guid&gt;</span>
+      <span class="nt">&lt;/item&gt;</span>
+    {% endfor %}
+  <span class="nt">&lt;/channel&gt;</span>
+<span class="nt">&lt;/rss&gt;</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>JSON:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="nt">"employees"</span><span class="p">:[</span><span class="w">
+    </span><span class="p">{</span><span class="nt">"firstName"</span><span class="p">:</span><span class="s2">"John"</span><span class="p">,</span><span class="w"> </span><span class="nt">"lastName"</span><span class="p">:</span><span class="s2">"Doe"</span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="nt">"firstName"</span><span class="p">:</span><span class="s2">"Anna"</span><span class="p">,</span><span class="w"> </span><span class="nt">"lastName"</span><span class="p">:</span><span class="s2">"Smith"</span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="nt">"firstName"</span><span class="p">:</span><span class="s2">"Peter"</span><span class="p">,</span><span class="w"> </span><span class="nt">"lastName"</span><span class="p">:</span><span class="s2">"Jones"</span><span class="p">}</span><span class="w">
+</span><span class="p">]}</span></code></pre></figure>
+
+<p>SQL:</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">as</span> <span class="n">cm_content_nodes</span>
+<span class="k">from</span> <span class="n">alf_node</span> <span class="n">nd</span><span class="p">,</span> <span class="n">alf_qname</span> <span class="n">qn</span><span class="p">,</span> <span class="n">alf_namespace</span> <span class="n">ns</span>
+<span class="k">where</span> <span class="n">qn</span><span class="p">.</span><span class="n">ns_id</span> <span class="o">=</span> <span class="n">ns</span><span class="p">.</span><span class="n">id</span>
+  <span class="k">and</span> <span class="n">nd</span><span class="p">.</span><span class="n">type_qname_id</span> <span class="o">=</span> <span class="n">qn</span><span class="p">.</span><span class="n">id</span>
+  <span class="k">and</span> <span class="n">ns</span><span class="p">.</span><span class="n">uri</span> <span class="o">=</span> <span class="s1">'http://www.alfresco.org/model/content/1.0'</span>
+  <span class="k">and</span> <span class="n">qn</span><span class="p">.</span><span class="n">local_name</span> <span class="o">=</span> <span class="s1">'content'</span><span class="p">;</span></code></pre></figure>
+
+<p>Java:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="n">String</span> <span class="nf">getToken</span><span class="o">(</span><span class="n">HttpClient</span> <span class="n">client</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">UnsupportedEncodingException</span><span class="o">{</span>
+  <span class="n">Cookie</span><span class="o">[]</span> <span class="n">cookies</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="na">getState</span><span class="o">().</span><span class="na">getCookies</span><span class="o">();</span>
+  <span class="k">for</span> <span class="o">(</span><span class="n">Cookie</span> <span class="n">cookie</span> <span class="o">:</span> <span class="n">cookies</span><span class="o">){</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">cookie</span><span class="o">.</span><span class="na">getName</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">"Alfresco-CSRFToken"</span><span class="o">)){</span>
+      <span class="k">return</span> <span class="n">URLDecoder</span><span class="o">.</span><span class="na">decode</span><span class="o">(</span><span class="n">cookie</span><span class="o">.</span><span class="na">getValue</span><span class="o">(),</span> <span class="s">"UTF-8"</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+  <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+<span class="o">}</span></code></pre></figure>
+
+                
+
+              </div>
+			  <nav class="article-previous fn-clear">
+				
+				  <a class="prev" href="/Technica/2015/08/analytics-tags-comments.html"
+				  rel="bookmark" title="Analytics, tags and comments">
+				    &laquo;&nbsp;Analytics, tags and comments
+				  </a>
+				
+				
+				  <a class="next" href="/Technica/2015/10/images.html"
+				  rel="bookmark" title="Images" style="float:right">
+				    Images&nbsp;&raquo;
+				  </a>
+				
+			  </nav>
+			  
+			  
+
+			  
+
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 hidden-xs">
+          <div class="sidebar">
+  <h2>Recent Articles</h2>
+  <ul>
+    
+    <li><a href="/Technica/2017/09/Pong-from-Pixels.html">Pong from Pixels</a></li>
+    
+    <li><a href="/Technica/2017/09/DRL-with-a-natural-language-action-space.html">Deep Reinforcement Learning with a Natural Language Action Space</a></li>
+    
+    <li><a href="/Technica/2017/09/DRL-Survey.html">DRL Survey</a></li>
+    
+    <li><a href="/Technica/2017/08/django-configuration.html">Django Configuration</a></li>
+    
+    <li><a href="/Technica/2017/08/gdb.html">gdb</a></li>
+    
+    <li><a href="/Technica/2017/07/Paxos-Learning.html">Paxos</a></li>
+    
+    <li><a href="/Technica/2017/06/ib-record.html">ib record</a></li>
+    
+    <li><a href="/Technica/2017/04/Markdown-Reference.html">Markdown Reference</a></li>
+    
+    <li><a href="/Technica/2017/03/Install-Packages.html">Install Packages for Windows or UNIX</a></li>
+    
+  </ul>
+</div>
+
+<div class="sidebar">
+  <h2>Tags</h2>
+  <ul>
+    
+      <!--li><a href="/Technica/tags.html#social">social</a></li-->
+      <li><a href="/Technica/tag/social" data-toggle="tooltip" data-placement="right" title='1'>social</a></li>
+    
+      <!--li><a href="/Technica/tags.html#jekyll">jekyll</a></li-->
+      <li><a href="/Technica/tag/jekyll" data-toggle="tooltip" data-placement="right" title='6'>jekyll</a></li>
+    
+      <!--li><a href="/Technica/tags.html#analytics">analytics</a></li-->
+      <li><a href="/Technica/tag/analytics" data-toggle="tooltip" data-placement="right" title='1'>analytics</a></li>
+    
+      <!--li><a href="/Technica/tags.html#tags">tags</a></li-->
+      <li><a href="/Technica/tag/tags" data-toggle="tooltip" data-placement="right" title='1'>tags</a></li>
+    
+      <!--li><a href="/Technica/tags.html#comments">comments</a></li-->
+      <li><a href="/Technica/tag/comments" data-toggle="tooltip" data-placement="right" title='1'>comments</a></li>
+    
+      <!--li><a href="/Technica/tags.html#code">code</a></li-->
+      <li><a href="/Technica/tag/code" data-toggle="tooltip" data-placement="right" title='1'>code</a></li>
+    
+      <!--li><a href="/Technica/tags.html#images">images</a></li-->
+      <li><a href="/Technica/tag/images" data-toggle="tooltip" data-placement="right" title='1'>images</a></li>
+    
+      <!--li><a href="/Technica/tags.html#Literature">Literature</a></li-->
+      <li><a href="/Technica/tag/Literature" data-toggle="tooltip" data-placement="right" title='1'>Literature</a></li>
+    
+      <!--li><a href="/Technica/tags.html#UNIX">UNIX</a></li-->
+      <li><a href="/Technica/tag/UNIX" data-toggle="tooltip" data-placement="right" title='10'>UNIX</a></li>
+    
+      <!--li><a href="/Technica/tags.html#OS">OS</a></li-->
+      <li><a href="/Technica/tag/OS" data-toggle="tooltip" data-placement="right" title='10'>OS</a></li>
+    
+      <!--li><a href="/Technica/tags.html#DRL">DRL</a></li-->
+      <li><a href="/Technica/tag/DRL" data-toggle="tooltip" data-placement="right" title='3'>DRL</a></li>
+    
+  </ul>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+      <footer class="footer-distributed">
+		Copyright @Fierralin
+    </footer>
+  </body>
+</html>
+
+</div>
