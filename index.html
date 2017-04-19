@@ -55,9 +55,16 @@ layout: page
 
   <div id="desc-{{ post_str }}"
     class="post-descr">
+      {{ post.content | truncatehtml: 100 }}
     <p>
-	  <span style="color: honeydew">Description: </span>
-      {{ post.description }}
+	<a href="#div-{{ post_str }}"
+	   id="show-{{ post_str }}"
+	   onclick="showval='{{ post_str }}';
+	   showmoreless(showval, 'desc-'+showval ,'show-'+showval)"
+	   style="float:right"
+	   title="Show More">
+	  <img src='http://fierralin.github.com/images/arrow_show.png' height='18px' alt='&lt;'>
+	</a>
     </p>
   </div>
   
