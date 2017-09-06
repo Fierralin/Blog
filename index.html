@@ -29,7 +29,7 @@ layout: page
 		{% assign post_str = post_str | remove: '.html'%}
 		{% assign post_str = post_str | remove_first: '-'%}
   <h2 class="post-title" id="div-{{ post_str }}">
-    <a href="{{post.url | prepend:site.baseurl}}">
+    <a href="{{post.url | prepend:site.baseurl}}.html">
       {{ post.title }}
     </a>
   </h2>
@@ -81,7 +81,7 @@ layout: page
 	</a>
   </div>
   <script>
-    $( "#post-{{ post_str }}" ).load( "{{post.url | prepend:site.baseurl}} #postcontent" );
+    $( "#post-{{ post_str }}" ).load( "{{post.url | prepend:site.baseurl}}.html #postcontent" );
   </script>
 {% endfor %}
 

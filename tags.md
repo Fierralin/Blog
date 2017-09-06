@@ -17,7 +17,7 @@ title: Tags
 		{% for post in site.posts %}
 		 {% if post.tags contains tag[0] %}
 		  <li>
-		   <a href="{{post.url | prepend: site.baseurl}}">{{ post.title }}, {{ post.date | date_to_string }}</a>
+		   <a href="{{post.url | prepend: site.baseurl}}.html">{{ post.title }}, {{ post.date | date_to_string }}</a>
 		   {% for tagg in post.tags %}
 		    <a href="#{{ tagg[0] | slugify }}">{{ tagg[0] }}</a>
 		   {% endfor %}
