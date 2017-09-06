@@ -60,7 +60,7 @@ done
 #echo $2
 #echo $#
 
-post_name=`date  "+%Y-%m-%d"`-`echo $post_srcname | sed "s/[ \/ : ^ \& \% \# \! , . { } ( ) * ? \" < > |]/-/g"`.$format_end
+post_name=2000-01-01-`echo $post_srcname | sed "s/[ \/ : ^ \& \% \# \! , . { } ( ) * ? \" < > |]/-/g"`.$format_end
 #echo $post_name
 
 post_name=`echo $post_name | sed 's/'"'"/-'/g'`
