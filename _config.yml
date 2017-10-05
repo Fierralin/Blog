@@ -1,6 +1,6 @@
 # Jekyll configuration
 
-name: Fierralin's Blog
+name: Fierralin Technica
 description: Software Developer
 
 # Url is currently only used only for the RSS feed in feed.xml
@@ -55,6 +55,6 @@ kramdown:
   input: GFM # Enable GitHub Flavored Markdown (fenced code blocks)
   hard_wrap: true
 
-exclude: ['README.md', 'LICENSE']
+exclude: ['README.md', 'LICENSE', 'Gemfile', 'Gemfile.lock', 'SimpleHTTPServer.sh', 'addtags.sh', 'newpost.sh', 'server.sh', 'good.py']
 # destination: -d DIR
 #destination: /srv/www/whuthering

@@ -205,6 +205,11 @@ div.post-meta {
     display: inline;
   }
 }
+.post-content table, tr, td{
+  border: 0.5px solid;
+  border-spacing: 0.5px;
+  padding: 2px;
+}
 .post-footer {
 
   height: 20px;
